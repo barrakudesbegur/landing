@@ -44,16 +44,21 @@ a {
   font-weight: normal;
 }
 
-.text {
+.block {
   margin: 0 auto;
   max-width: 60ch;
-  line-height: 1.75;
-  font-size: 18px;
   text-align: left;
+  margin-top: 2rem;
   background-color: rgba(255, 255, 255, 0.07);
   border: rgba(255, 255, 255, 0.08) 2px solid;
   border-radius: 0.5rem;
   padding: 0.5rem 1rem;
+}
+
+.text {
+  line-height: 1.75;
+  font-size: 18px;
+  margin: 0;
 }
 
 .social-network > a {
@@ -66,5 +71,8 @@ a {
 }
 
 .subtitle {
-  margin: 2rem 0 0.5rem;
+  text-align: center;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.07);
+  margin: 0 -1rem 0.5rem;
+  padding-bottom: 0.5rem;
 }
