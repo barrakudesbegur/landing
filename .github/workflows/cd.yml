@@ -26,22 +26,22 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version-file: '.nvmrc'
+          node-version-file: ".nvmrc"
 
       - name: Install dependencies
         shell: bash
         run: npm ci
-        
+
       - name: Build the site
         run: npm run build
-        
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: 'dist'
-          name: 'dist'
+          path: "dist"
+          name: "dist"
           if-no-files-found: error
-          
+
   deploy:
     needs: build
 
@@ -59,4 +59,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v2
         with:
-          artifact_name: 'dist'
+          artifact_name: "dist"
