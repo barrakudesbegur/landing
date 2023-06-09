@@ -61,11 +61,29 @@
     <header
       class="flex min-h-[80vh] flex-col items-center justify-center bg-brand text-white"
     >
-      <img
-        src="assets/logo-filled.png"
-        alt="Barrakudes logo"
-        class="mb-2 w-full max-w-[theme(spacing.40)]"
-      />
+      <picture class="mb-2 block w-full max-w-[160px]">
+        <source
+          srcset="
+            assets/logo-filled.png?as=avif&width=160 1x,
+            assets/logo-filled.png?as=avif&width=320 2x
+          "
+          type="image/avif"
+        />
+        <source
+          srcset="
+            assets/logo-filled.png?as=webp&width=160 1x,
+            assets/logo-filled.png?as=webp&width=320 2x
+          "
+          type="image/webp"
+        />
+        <img
+          srcset="
+            assets/logo-filled.png?width=160 1x,
+            assets/logo-filled.png?width=320 2x
+          "
+          alt="Barrakudes logo"
+        />
+      </picture>
       <h1 class="mb-4 text-center leading-none tracking-tight">
         <span class="block text-3xl font-bold">Barrakudes de Begur</span>
         <span class="block text-xl">Associació Juvenil de Begur</span>
@@ -114,11 +132,29 @@
           participant en les diverses propostes que s'hi desenvolupen.
         </p>
 
-        <img
-          class="mx-auto mt-12 w-full max-w-sm"
-          src="assets/explicacio-logo-transparent.png"
-          alt="Explicació dels elements del logotip"
-        />
+        <picture class="mx-auto mt-12 block w-full max-w-sm">
+          <source
+            srcset="
+              assets/explicacio-logo-transparent.png?as=avif&width=384 1x,
+              assets/explicacio-logo-transparent.png?as=avif&width=768 2x
+            "
+            type="image/avif"
+          />
+          <source
+            srcset="
+              assets/explicacio-logo-transparent.png?as=webp&width=384 1x,
+              assets/explicacio-logo-transparent.png?as=webp&width=768 2x
+            "
+            type="image/webp"
+          />
+          <img
+            srcset="
+              assets/explicacio-logo-transparent.png?width=384 1x,
+              assets/explicacio-logo-transparent.png?width=768 2x
+            "
+            alt="Explicació dels elements del logotip"
+          />
+        </picture>
       </div>
 
       <div class="bg-brand px-4 py-12 text-white">
