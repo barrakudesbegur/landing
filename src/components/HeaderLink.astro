@@ -11,7 +11,7 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, '');
 
 <a 
 	href={href} 
-	class:list={["inline-block py-4 px-2 last:pr-4 first:pl-4 focus-visible:underline", className, { 'underline': isActive }]} 
+	class:list={["inline-block py-4 px-2 last:pr-4 first:pl-4 focus-visible:underline leading-4", className, { 'underline': isActive }]} 
 	{...props}
 ><slot /></a>
 

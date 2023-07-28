@@ -1,0 +1,62 @@
+---
+import { getCollection } from 'astro:content';
+import FormattedDate from '../../components/FormattedDate.astro';
+const today = new Date()
+today.setHours(0,0,0,0);
+
+const upcomingEvents = (await getCollection('agenda')).filter((event) => event.data.pubDate.valueOf() >= today.valueOf()).sort(
+	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+);
+---
+
+<div class="bg-brand px-4 py-12 text-white scroll-mt-12" id="agenda">
+  <h2
+    class="mb-6 text-center text-4xl font-bold leading-none tracking-tight"
+  >
+    Agenda
+  </h2>
+  {upcomingEvents.length ? 
+   <section>
+    <ul>
+					{
+						upcomingEvents.map((event) => (
+							<li>
+								<FormattedDate date={event.data.pubDate} />
+								<a href={`/agenda/${event.slug}/`}>{event.data.title}</a>
+							</li>
+						))
+					}
+				</ul>
+  </section>
+  :
+  <section class="mx-auto max-w-xl py-16 text-center text-base">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="mx-auto mb-8 w-12"
+      viewBox="0 0 24 24"
+      stroke-width="1"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path
+        d="M9 5h9a2 2 0 0 1 2 2v9m-.184 3.839a2 2 0 0 1 -1.816 1.161h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 1.158 -1.815"
+      ></path>
+      <path d="M16 3v4"></path>
+      <path d="M8 3v1"></path>
+      <path d="M4 11h7m4 0h5"></path>
+      <path d="M3 3l18 18"></path>
+    </svg>
+
+    <p class="text-xl font-bold leading-none text-white">
+      Cap esdeveniment programat
+    </p>
+    <p class="mt-2 text-sm text-orange-100">
+      Estigues atent/a a les nostres xarxes socials!
+    </p>
+  </section>
+}
+ 
+</div>

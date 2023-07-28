@@ -2,13 +2,15 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from "../components/Footer.astro";
 import Header from '../components/Header.astro';
-import Hero from "../components/Hero.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import AboutSection from '../components/index/AboutSection.astro';
+import AgendaSection from '../components/index/AgendaSection.astro';
+import Hero from "../components/index/Hero.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 ---
 
 <!DOCTYPE html>
-<html lang="ca-ES">
+<html lang="ca-ES" class="scroll-smooth">
   <head>
     <BaseHead 
       title={`${SITE_TITLE} | Associació Juvenil de Begur | Qui sóm?`}
@@ -19,88 +21,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 
   <body class="bg-slate-50 text-slate-900">
     <Header />
+    
     <Hero />
 
     <main>
-      <div class="mx-auto max-w-xl px-4 py-12">
-        <h2
-          class="mb-6 text-center text-4xl font-bold leading-none tracking-tight text-orange-500"
-        >
-          Qui som?
-        </h2>
-        <p class="text-base">
-          Som un grup de joves de Begur que neix de l'equip de monitors i
-          monitores de l'Esplai Autèntic. Durant les experiències del Casal
-          d'Estiu i l'Esplai hem format una pinya i ens ha despertat la il·lusió
-          i motivació de continuar col·laborant amb les activitats i festivitats
-          del poble tal i com ja fem amb les que van destinades a la infància.
-          Volem activar la joventut i implicar-nos en la vida del poble, ja
-          sigui dinamitzant diferents esdeveniments o barres d'esdeveniments o
-          participant en les diverses proeventes que s'hi desenvolupen.
-        </p>
-
-        <picture class="mx-auto mt-12 block w-full max-w-sm">
-          <source
-            srcset="
-              explicacio-logo-transparent.png?as=avif&width=384 1x,
-              explicacio-logo-transparent.png?as=avif&width=768 2x
-            "
-            type="image/avif"
-          />
-          <source
-            srcset="
-              explicacio-logo-transparent.png?as=webp&width=384 1x,
-              explicacio-logo-transparent.png?as=webp&width=768 2x
-            "
-            type="image/webp"
-          />
-          <img
-            srcset="
-              explicacio-logo-transparent.png?width=384 1x,
-              explicacio-logo-transparent.png?width=768 2x
-            "
-            height="257"
-            width="384"
-            alt="Explicació dels elements del logotip"
-          />
-        </picture>
-      </div>
-
-      <div class="bg-brand px-4 py-12 text-white">
-        <h2
-          class="mb-6 text-center text-4xl font-bold leading-none tracking-tight"
-        >
-          Agenda
-        </h2>
-        <div class="mx-auto max-w-xl py-16 text-center text-base">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="mx-auto mb-8 w-12"
-            viewBox="0 0 24 24"
-            stroke-width="1"
-            stroke="currentColor"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path
-              d="M9 5h9a2 2 0 0 1 2 2v9m-.184 3.839a2 2 0 0 1 -1.816 1.161h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 1.158 -1.815"
-            ></path>
-            <path d="M16 3v4"></path>
-            <path d="M8 3v1"></path>
-            <path d="M4 11h7m4 0h5"></path>
-            <path d="M3 3l18 18"></path>
-          </svg>
-
-          <p class="text-xl font-bold leading-none text-white">
-            Cap esdeveniment programat
-          </p>
-          <p class="mt-2 text-sm text-orange-100">
-            Estigues atent/a a les nostres xarxes socials!
-          </p>
-        </div>
-      </div>
+      <AboutSection />
+      <AgendaSection />
     </main>
 
     <Footer />

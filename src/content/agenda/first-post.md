@@ -1,7 +1,7 @@
 ---
 title: 'First event'
 description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 08 2022'
+pubDate: 'Jul 08 2024'
 heroImage: '/placeholder-hero.jpg'
 ---
 
