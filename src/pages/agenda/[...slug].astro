@@ -1,0 +1,21 @@
+---
+import { CollectionEntry, getCollection } from 'astro:content';
+import AgendaEvent from '../../layouts/AgendaEvent.astro';
+
+export async function getStaticPaths() {
+	const events = await getCollection('agenda');
+	return events.map((event) => ({
+		params: { slug: event.slug },
+		props: event,
+	}));
+}
+type Props = CollectionEntry<'agenda'>;
+
+const event = Astro.props;
+const { Content } = await event.render();
+---
+
+<AgendaEvent {...event.data}>
+	<h1>{event.data.title}</h1>
+	<Content />
+</AgendaEvent>
