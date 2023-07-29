@@ -1,31 +1,22 @@
 ---
-import BaseHead from '../../components/BaseHead.astro';
-import Header from '../../components/Header.astro';
-import Footer from '../../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 
 const events = (await getCollection('agenda')).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+	(a, b) => a.data.startDate.valueOf() - b.data.startDate.valueOf()
 );
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<BaseHead title={`${SITE_TITLE} | Agenda`} description={SITE_DESCRIPTION} />
-	</head>
-
-	<body>
-		<Header />
-		<main>
+<BaseLayout title={`${SITE_TITLE} | Agenda`} description={SITE_DESCRIPTION}>
+	<main>
 			<section>
 				<ul>
 					{
 						events.map((event) => (
 							<li>
-								<FormattedDate date={event.data.pubDate} />
+								<FormattedDate date={event.data.startDate} />
 								<a href={`/agenda/${event.slug}/`}>{event.data.title}</a>
 							</li>
 						))
@@ -33,6 +24,4 @@ const events = (await getCollection('agenda')).sort(
 				</ul>
 			</section>
 		</main>
-		<Footer />
-	</body>
-</html>
+</BaseLayout>

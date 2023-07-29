@@ -1,6 +1,8 @@
 ---
 import { CollectionEntry, getCollection } from 'astro:content';
-import AgendaEvent from '../../layouts/AgendaEvent.astro';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FormattedDate from '../../components/FormattedDate.astro';
+import { SITE_TITLE } from '../../consts';
 
 export async function getStaticPaths() {
 	const events = await getCollection('agenda');
@@ -13,9 +15,20 @@ type Props = CollectionEntry<'agenda'>;
 
 const event = Astro.props;
 const { Content } = await event.render();
----
 
-<AgendaEvent {...event.data}>
-	<h1>{event.data.title}</h1>
-	<Content />
-</AgendaEvent>
+const { title, description, startDate, updatedDate, image } = event.data;
+
+---
+<BaseLayout title={`${title} | ${SITE_TITLE}`} description={description} image={image}>
+		<main>
+			<article>
+				<h1>{title}</h1>
+				<FormattedDate date={startDate} />
+
+				{updatedDate && <div>Última edició <FormattedDate date={updatedDate} /></div>}
+
+				<Content />
+
+			</article>
+		</main>
+</BaseLayout>

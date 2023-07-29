@@ -4,8 +4,8 @@ import FormattedDate from '../../components/FormattedDate.astro';
 const today = new Date()
 today.setHours(0,0,0,0);
 
-const upcomingEvents = (await getCollection('agenda')).filter((event) => event.data.pubDate.valueOf() >= today.valueOf()).sort(
-	(a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()
+const upcomingEvents = (await getCollection('agenda')).filter((event) => event.data.startDate.valueOf() >= today.valueOf()).sort(
+	(a, b) => a.data.startDate.valueOf() - b.data.startDate.valueOf()
 );
 ---
 
@@ -21,7 +21,7 @@ const upcomingEvents = (await getCollection('agenda')).filter((event) => event.d
 					{
 						upcomingEvents.map((event) => (
 							<li>
-								<FormattedDate date={event.data.pubDate} />
+								<FormattedDate date={event.data.startDate} />
 								<a href={`/agenda/${event.slug}/`}>{event.data.title}</a>
 							</li>
 						))
