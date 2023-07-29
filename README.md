@@ -1,5 +1,7 @@
 # Barrakudes de Begur Landing page
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/615f7ee2-e8d2-4ec9-a91e-4be548c089a8/deploy-status)](https://app.netlify.com/sites/barrakudesbegur/deploys)
+
 ## Develop
 
 This site is deployed automatically with GitHub pages.
