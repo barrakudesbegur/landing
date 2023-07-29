@@ -16,9 +16,12 @@ const events = (await getCollection('agenda')).sort(
 				<h2
     class="mb-6 text-center text-4xl font-bold leading-none tracking-tight"
   >
-    Esdeveniments
+    Agenda
   </h2>
 
+	<p class="text-xl leading-none text-white text-center mt-8 mb-4">
+      Tots els esdeveniments
+    </p>
 				<ul class="max-w-xl mx-auto space-y-4">
 					{
 						events.map((event) => (
