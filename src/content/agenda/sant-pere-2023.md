@@ -5,6 +5,8 @@ startDate: 2024-07-01 20:30
 image: /events/sant-pere-2023.jpg
 ---
 
+Comença l'estiuu ☀️ i quina millor manera de fer-ho que amb una festassa! 🤩🤪😏
+
 ## Poster
 
 ![Poster nit jove de Sant Pere 2023](/events/sant-pere-2023.jpg)
@@ -22,9 +24,9 @@ Parc de l'Arbreda de Begur.
 
 ## Artistes
 
-- The Papa's and The Popo's
-- Kharloss Selektah
-- DJ Evelyn
+- [The Papa's and The Popo's](https://www.thepapasandthepopos.com/)
+- [Kharloss Selektah](https://www.instagram.com/kharloss_selektah/)
+- [DJ Evelyn](https://www.instagram.com/djevelynn)
 
 ## Entrada
 
