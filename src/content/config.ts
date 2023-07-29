@@ -4,6 +4,10 @@ const agenda = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
+    publicationDate: z
+      .string()
+      .or(z.date())
+      .transform((val) => new Date(val)),
     startDate: z
       .string()
       .or(z.date())

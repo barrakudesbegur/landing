@@ -10,6 +10,7 @@ export async function get(context) {
     site: context.site,
     items: events.map((event) => ({
       ...event.data,
+      pubDate: event.data.publicationDate,
       link: `/agenda/${event.slug}/`,
     })),
   })
