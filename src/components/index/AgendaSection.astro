@@ -16,12 +16,12 @@ const upcomingEvents = (await getCollection('agenda')).filter((event) => event.d
     Agenda
   </h2>
 
-  <p class="text-xl leading-none text-white text-center mt-8 mb-4">
-        Próxims esdeveniments
-      </p>
-
+  
   {upcomingEvents.length ? 
    <section>
+    <p class="text-xl leading-none text-white text-center mt-8 mb-4">
+      Próxims esdeveniments
+    </p>
     <ul class="max-w-xl mx-auto">
 					{
 						upcomingEvents.map((event) => (
@@ -45,7 +45,7 @@ const upcomingEvents = (await getCollection('agenda')).filter((event) => event.d
         </div>
   </section>
   : 
-  <section class="mx-auto max-w-xl py-16 text-center text-base">
+  <section class="mx-auto max-w-xl pt-16 pb-12 text-center text-base">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="mx-auto mb-8 w-12"
@@ -72,6 +72,12 @@ const upcomingEvents = (await getCollection('agenda')).filter((event) => event.d
       <p class="mt-2 text-sm text-orange-100">
         Estigues atent/a a les nostres xarxes socials!
       </p>
+      
+        <div class="text-center mt-12">
+          <a href="/agenda" class="text-lg font-semibold mx-auto inline-block text-white border-b-2 border-orange-300 leading-none">
+            Veure esdeveniments passats
+          </a>
+        </div>
     </section>
   } 
 </div>

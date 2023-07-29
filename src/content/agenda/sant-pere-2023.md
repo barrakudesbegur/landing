@@ -1,7 +1,7 @@
 ---
 title: Nit jove de Sant Pere 2023
 description: Comença l'estiuu ☀️ i quina millor manera de fer-ho que amb una festassa 🤩🤪😏
-startDate: 2024-07-01 20:30
+startDate: 2023-07-01 20:30
 image: /events/sant-pere-2023.jpg
 ---
 
