@@ -1,0 +1,41 @@
+---
+import { CollectionEntry, getCollection } from 'astro:content'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import FormattedDate from '../../components/FormattedDate.astro'
+import { SITE_TITLE } from '../../consts'
+
+export async function getStaticPaths() {
+  const events = await getCollection('agenda')
+  return events.map((event) => ({
+    params: { slug: event.slug },
+    props: event,
+  }))
+}
+type Props = CollectionEntry<'agenda'>
+
+const event = Astro.props
+const { Content } = await event.render()
+
+const { title, description, startDate, updatedDate, image } = event.data
+---
+
+<BaseLayout
+  title={`${title} | ${SITE_TITLE}`}
+  description={description}
+  image={image}
+>
+  <main class="px-4">
+    <article
+      class:list={[
+        'prose mx-auto my-24',
+        'prose-h2:mt-4 prose-h2:mb-0 prose-p:mb-1 prose-ul:my-0 prose-li:mt-0 prose-li:mb-1 prose-img:my-2',
+      ]}
+    >
+      <h1 class="mb-2 sm:text-6xl uppercase">{title}</h1>
+
+      <hr class="my-2 border-gray-300" />
+
+      <Content />
+    </article>
+  </main>
+</BaseLayout>
