@@ -1,16 +1,15 @@
 ---
-import AboutSection from '../components/index/AboutSection.astro';
-import AgendaSection from '../components/index/AgendaSection.astro';
-import Hero from "../components/index/Hero.astro";
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
-import BaseLayout from '../layouts/BaseLayout.astro';
-
+import AboutSection from '../components/index/AboutSection.astro'
+import AgendaSection from '../components/index/AgendaSection.astro'
+import Hero from '../components/index/Hero.astro'
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
+import BaseLayout from '../layouts/BaseLayout.astro'
 ---
 
-<BaseLayout 
+<BaseLayout
   title={`${SITE_TITLE} | Associació Juvenil de Begur | Qui sóm?`}
   description={SITE_DESCRIPTION}
-  image='https://barrakudesbegur.github.io/landing/icons/android-chrome-256x256.png'
+  image="https://barrakudesbegur.github.io/landing/icons/android-chrome-256x256.png"
 >
   <Hero />
 
@@ -18,5 +17,4 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <AboutSection />
     <AgendaSection />
   </main>
-
 </BaseLayout>

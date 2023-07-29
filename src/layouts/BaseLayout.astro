@@ -1,13 +1,12 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import type {Props as BaseHeadProps} from '../components/BaseHead.astro';
-import Footer from "../components/Footer.astro";
-import Header from '../components/Header.astro';
+import BaseHead from '../components/BaseHead.astro'
+import type { Props as BaseHeadProps } from '../components/BaseHead.astro'
+import Footer from '../components/Footer.astro'
+import Header from '../components/Header.astro'
 
-type Props = BaseHeadProps & {class?:string}
+type Props = BaseHeadProps & { class?: string }
 
-const {class: classList, ...props} = Astro.props
-
+const { class: classList, ...props } = Astro.props
 ---
 
 <!DOCTYPE html>
@@ -16,9 +15,9 @@ const {class: classList, ...props} = Astro.props
     <BaseHead {...props} />
   </head>
 
-  <body class:list={["bg-slate-50 text-slate-900 min-h-[100vh]", classList]}>
+  <body class:list={['bg-slate-50 text-slate-900 min-h-[100vh]', classList]}>
     <Header />
-    
+
     <slot />
 
     <Footer />

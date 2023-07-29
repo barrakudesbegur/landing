@@ -1,36 +1,40 @@
 ---
-import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
-import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import EventCard from '../../components/EventCard.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts'
+import { getCollection } from 'astro:content'
+import FormattedDate from '../../components/FormattedDate.astro'
+import BaseLayout from '../../layouts/BaseLayout.astro'
+import EventCard from '../../components/EventCard.astro'
 
 const events = (await getCollection('agenda')).sort(
-	(a, b) => a.data.startDate.valueOf() - b.data.startDate.valueOf()
-);
+  (a, b) => a.data.startDate.valueOf() - b.data.startDate.valueOf(),
+)
 ---
 
-<BaseLayout title={`Agenda | ${SITE_TITLE}`} description={SITE_DESCRIPTION} class="!bg-brand !text-white">
-	<main>
-			<section class="py-16">
-				<h2
-    class="mb-6 text-center text-4xl font-bold leading-none tracking-tight"
-  >
-    Agenda
-  </h2>
+<BaseLayout
+  title={`Agenda | ${SITE_TITLE}`}
+  description={SITE_DESCRIPTION}
+  class="!bg-brand !text-white"
+>
+  <main>
+    <section class="py-16">
+      <h2
+        class="mb-6 text-center text-4xl font-bold leading-none tracking-tight"
+      >
+        Agenda
+      </h2>
 
-	<p class="text-xl leading-none text-white text-center mt-8 mb-4">
-      Tots els esdeveniments
-    </p>
-				<ul class="max-w-xl mx-auto space-y-4">
-					{
-						events.map((event) => (
-							<li>
-								<EventCard event={event}/>
-              </li>
-						))
-					}
-				</ul>
-			</section>
-		</main>
+      <p class="text-xl leading-none text-white text-center mt-8 mb-4">
+        Tots els esdeveniments
+      </p>
+      <ul class="max-w-xl mx-auto space-y-4">
+        {
+          events.map((event) => (
+            <li>
+              <EventCard event={event} />
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+  </main>
 </BaseLayout>
