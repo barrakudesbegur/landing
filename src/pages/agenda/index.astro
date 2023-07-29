@@ -3,6 +3,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../../consts';
 import { getCollection } from 'astro:content';
 import FormattedDate from '../../components/FormattedDate.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import EventCard from '../../components/EventCard.astro';
 
 const events = (await getCollection('agenda')).sort(
 	(a, b) => a.data.startDate.valueOf() - b.data.startDate.valueOf()
@@ -11,14 +12,19 @@ const events = (await getCollection('agenda')).sort(
 
 <BaseLayout title={`${SITE_TITLE} | Agenda`} description={SITE_DESCRIPTION}>
 	<main>
-			<section>
-				<ul>
+			<section class="bg-brand text-white py-16">
+				<h2
+    class="mb-6 text-center text-4xl font-bold leading-none tracking-tight"
+  >
+    Esdeveniments
+  </h2>
+
+				<ul class="max-w-xl mx-auto space-y-4">
 					{
 						events.map((event) => (
 							<li>
-								<FormattedDate date={event.data.startDate} />
-								<a href={`/agenda/${event.slug}/`}>{event.data.title}</a>
-							</li>
+								<EventCard event={event}/>
+              </li>
 						))
 					}
 				</ul>

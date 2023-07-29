@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
-import FormattedDate from '../../components/FormattedDate.astro';
+import EventCard from '../EventCard.astro';
 const today = new Date()
 today.setHours(0,0,0,0);
 
@@ -22,18 +22,11 @@ const upcomingEvents = (await getCollection('agenda')).filter((event) => event.d
     <p class="text-xl leading-none text-white text-center mt-8 mb-4">
       Próxims esdeveniments
     </p>
-    <ul class="max-w-xl mx-auto">
+    <ul class="max-w-xl mx-auto space-y-4">
 					{
 						upcomingEvents.map((event) => (
 							<li>
-								<a class="bg-white text-black leading-none shadow-lg flex justify-between items-center pt-4 min-[420px]:pt-0 min-[420px]:flex-row flex-col focus-visible:ring-4 ring-black/50 rounded-lg outline-none" href={`/agenda/${event.slug}/`}>
-                  <img class="min-[420px]:max-w-[8rem] max-h-40 min-[420px]:rounded-l-lg min-[420px]:rounded-r-none rounded shadow-md min-[420px]:shadow-none" src={event.data.image} alt="">
-                  <div class="grow self-stretch p-4 flex flex-col justify-between">
-                    <h3 class="font-bold text-lg">{event.data.title}</h3>
-                    <p class="grow leading-normal">{event.data.description}</p>
-                    <FormattedDate class="text-gray-700 min-[420px]:mt-0 mt-4" date={event.data.startDate} />
-                  <div/>
-							  </a>
+								<EventCard event={event}/>
               </li>
 						))
 					}
