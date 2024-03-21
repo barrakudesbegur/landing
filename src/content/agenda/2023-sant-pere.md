@@ -4,6 +4,7 @@ description: Comença l'estiuu ☀️ i quina millor manera de fer-ho que amb un
 startDate: 2023-07-01 20:30
 publicationDate: 2023-06-26 20:16
 image: /events/2023-sant-pere.jpg
+igPost: https://www.instagram.com/p/Ct93fl0N0sY/
 ---
 
 Comença l'estiuu ☀️ i quina millor manera de fer-ho que amb una festassa! 🤩🤪😏

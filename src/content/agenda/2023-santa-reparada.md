@@ -4,6 +4,7 @@ description: Acaba l'estiu com toca! Amb una festa! 🌅🎉
 startDate: 2023-09-16 23:00
 publicationDate: 2023-09-07 21:12
 image: /events/2023-santa-reparada.jpg
+igPost: https://www.instagram.com/p/Cw577jgNigv/
 ---
 
 Per nosaltres encara no s’ha acabat l’estiu… no sense la nostra festa de Santa Reparada! Així doncs, teniu ganes d’acabar-lo a lo grande???

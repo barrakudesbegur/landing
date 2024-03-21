@@ -17,6 +17,11 @@ const agenda = defineCollection({
       .optional()
       .transform((str) => (str ? new Date(str) : undefined)),
     image: z.string().optional(),
+    igPost: z
+      .string()
+      .url()
+      .startsWith('https://www.instagram.com/p/')
+      .optional(),
   }),
 })
 

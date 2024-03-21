@@ -4,6 +4,7 @@ description: Vine a passar una bona estona amb nosaltres!
 startDate: 2024-02-24 23:00
 publicationDate: 2024-02-19 16:47
 image: /events/2024-vermut-carnaval.jpg
+igPost: https://www.instagram.com/p/C3iUwp8t39d/
 ---
 
 Que sí que sí!!! Clar que farem el vermut que us vam prometre, i aquest cap de setmana ❤️‍🔥
