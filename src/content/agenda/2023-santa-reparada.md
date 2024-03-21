@@ -25,11 +25,11 @@ Dissabte 16 de setembre.
 
 ## Lloc
 
-Parc de l'Arbreda de Begur.
+📍 Parc de l'Arbreda de Begur.
 
 ## Artistes
 
-- [DJ Marc Dunjó - DJ Sek](https://www.instagram.com/marcdunjo)
+- [DJ Marc Dunjó](https://www.instagram.com/marcdunjo)
 - [IvanOte](https://www.instagram.com/ivanote)
 
 ## Entrada

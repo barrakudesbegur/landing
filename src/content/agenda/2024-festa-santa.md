@@ -28,7 +28,7 @@ Dissabte 30 de maig.
 
 ## Lloc
 
-Parc de l'Arbreda de Begur.
+📍 Parc de l'Arbreda de Begur.
 
 ## Artistes
 

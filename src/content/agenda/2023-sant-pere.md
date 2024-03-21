@@ -22,7 +22,7 @@ Dissabte 1 de juliol.
 
 ## Lloc
 
-Parc de l'Arbreda de Begur.
+📍 Parc de l'Arbreda de Begur.
 
 ## Artistes
 

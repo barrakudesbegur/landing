@@ -25,15 +25,15 @@ Ens veiem aviat 🫰🏽🫰🏽✨✨
 
 Dissabte 24 de febrer.
 
-- A partir de les 12:00.
+- A les 12:00.
 
 ## Lloc
 
-Plaça Esteva i Cruañas a Begur.
+📍 Plaça Esteva i Cruañas a Begur.
 
 ## Artistes
 
-- [DJ Marc Dunjó - DJ Sek](https://www.instagram.com/marcdunjo)
+- [DJ Marc Dunjó](https://www.instagram.com/marcdunjo)
 
 ## Entrada
 

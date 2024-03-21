@@ -30,7 +30,7 @@ Dissabte 28 de juny.
 
 ## Lloc
 
-Parc de l'Arbreda de Begur.
+📍 Parc de l'Arbreda de Begur.
 
 ## Artistes
 
