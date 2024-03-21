@@ -6,11 +6,13 @@ today.setHours(0, 0, 0, 0)
 
 const upcomingEvents = (await getCollection('agenda'))
   .filter((event) => event.data.startDate.valueOf() >= today.valueOf())
-  .sort((a, b) => a.data.startDate.valueOf() - b.data.startDate.valueOf())
+  .sort((a, b) => b.data.startDate.valueOf() - a.data.startDate.valueOf())
 ---
 
 <div class="bg-brand px-4 py-12 text-white scroll-mt-12" id="agenda">
-  <h2 class="mb-6 text-center text-5xl leading-none font-title uppercase tracking-wide">
+  <h2
+    class="mb-6 text-center text-5xl leading-none font-title uppercase tracking-wide"
+  >
     Agenda
   </h2>
 
