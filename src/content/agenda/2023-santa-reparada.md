@@ -1,7 +1,7 @@
 ---
 title: Festa de Santa Reparada 2023
 description: Acaba l'estiu com toca! Amb una festa! 🌅🎉
-startDate: 2023-16-09 23:00
+startDate: 2023-09-16 23:00
 publicationDate: 2023-09-07 21:12
 image: /events/2023-santa-reparada.jpg
 ---
