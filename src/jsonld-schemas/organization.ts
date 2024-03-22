@@ -1,5 +1,4 @@
 import type { Graph, Organization, WithContext } from 'schema-dts'
-import logoImage from '../../public/logo-barrakudes-begur.png'
 
 export const organizationSchema = {
   '@context': 'https://schema.org',
@@ -7,7 +6,7 @@ export const organizationSchema = {
   name: 'Barrakudes de Begur',
   legalName: 'Associació Juvenil Barrakudes',
   url: 'https://barrakudesbegur.org',
-  logo: logoImage.src,
+  logo: 'https://barrakudesbegur.org/logo-barrakudes-begur.png',
   foundingDate: '2022',
   address: {
     '@type': 'PostalAddress',
