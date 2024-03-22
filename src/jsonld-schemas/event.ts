@@ -5,16 +5,16 @@ import { placeSchemas } from './place'
 
 export const eventSchema = (
   event: CollectionEntry<'agenda'>['data'],
-  options: { url: URL },
+  { eventPageUrl }: { eventPageUrl: string },
 ) =>
   ({
     '@context': 'https://schema.org',
     '@type': 'MusicEvent',
     name: event.title,
-    url: options.url.toString(),
+    url: eventPageUrl,
     description: event.description,
     image: event.image
-      ? new URL(event.image, options.url).toString()
+      ? new URL(event.image, eventPageUrl).toString()
       : undefined,
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     eventStatus: 'https://schema.org/EventScheduled',
@@ -31,6 +31,8 @@ export const eventSchema = (
       '@type': 'Offer',
       price: event.price,
       priceCurrency: 'EUR',
+      url: event?.buyTicketsUrl ?? eventPageUrl,
+      validFrom: event.publicationDate.toISOString(),
       availability: 'https://schema.org/InStock',
     },
   }) as const satisfies WithContext<MusicEvent>

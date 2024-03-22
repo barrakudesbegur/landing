@@ -23,7 +23,9 @@ const event = eventPost.data
   title={`${event.title} | ${SITE_TITLE}`}
   description={event.description}
   image={event.image}
-  schemas={[{ item: eventSchema(event, { url: Astro.url }) }]}
+  schemas={[
+    { item: eventSchema(event, { eventPageUrl: Astro.url.toString() }) },
+  ]}
 >
   <main class="px-4">
     <article
