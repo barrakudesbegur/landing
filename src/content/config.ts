@@ -36,7 +36,7 @@ const agenda = defineCollection({
         }),
       )
       .optional(),
-    price: z.number().positive().default(0),
+    price: z.number().nonnegative().default(0),
   }),
 })
 
