@@ -2,9 +2,16 @@
 title: Festa de Santa Reparada 2023
 description: Acaba l'estiu com toca! Amb una festa! 🌅🎉
 startDate: 2023-09-16 23:00
+endDate: 2023-09-17 3:00
 publicationDate: 2023-09-07 21:12
 image: /events/2023-santa-reparada.jpg
 igPost: https://www.instagram.com/p/Cw577jgNigv/
+location: Parc de l'Arbreda, Begur
+performers:
+  - name: DJ Marc Dunjó
+    url: https://www.instagram.com/marcdunjo
+  - name: IvanOte
+    url: https://www.instagram.com/ivanote
 ---
 
 Per nosaltres encara no s’ha acabat l’estiu… no sense la nostra festa de Santa Reparada! Així doncs, teniu ganes d’acabar-lo a lo grande???
@@ -25,7 +32,7 @@ Dissabte 16 de setembre.
 
 ## Lloc
 
-📍 Parc de l'Arbreda de Begur.
+📍 Parc de l'Arbreda, Begur
 
 ## Artistes
 

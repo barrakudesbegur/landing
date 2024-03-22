@@ -1,7 +1,6 @@
 ---
-import { CollectionEntry, getCollection } from 'astro:content'
+import { type CollectionEntry, getCollection } from 'astro:content'
 import BaseLayout from '../../layouts/BaseLayout.astro'
-import FormattedDate from '../../components/FormattedDate.astro'
 import { SITE_TITLE } from '../../consts'
 
 export async function getStaticPaths() {
@@ -13,16 +12,47 @@ export async function getStaticPaths() {
 }
 type Props = CollectionEntry<'agenda'>
 
-const event = Astro.props
-const { Content } = await event.render()
+const eventPost = Astro.props
+const { Content } = await eventPost.render()
 
-const { title, description, startDate, updatedDate, image } = event.data
+const event = eventPost.data
 ---
 
 <BaseLayout
-  title={`${title} | ${SITE_TITLE}`}
-  description={description}
-  image={image}
+  title={`${event.title} | ${SITE_TITLE}`}
+  description={event.description}
+  image={event.image}
+  schemas={[
+    {
+      item: {
+        '@context': 'https://schema.org',
+        '@type': 'Event',
+        name: event.title,
+        url: Astro.url.toString(),
+        description: event.description,
+        image: event.image
+          ? new URL(event.image, Astro.url).toString()
+          : undefined,
+        eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+        eventStatus: 'https://schema.org/EventScheduled',
+        startDate: event.startDate.toISOString(),
+        endDate: event.endDate?.toISOString(),
+        location: event.location
+          ? [{ '@type': 'Place', name: event.location }]
+          : undefined,
+        organizer: {
+          '@type': 'Organization',
+          name: 'Barrakudes de Begur',
+          url: 'https://barrakudesbegur.org',
+        },
+        performer: event.performers?.map((performer) => ({
+          '@type': 'PerformingGroup',
+          name: performer.name,
+          sameAs: performer.url,
+        })),
+      },
+    },
+  ]}
 >
   <main class="px-4">
     <article
@@ -31,7 +61,7 @@ const { title, description, startDate, updatedDate, image } = event.data
         'prose-h2:mb-0 prose-h2:mt-4 prose-p:mb-1 prose-ul:my-0 prose-li:mb-1 prose-li:mt-0 prose-img:my-2',
       ]}
     >
-      <h1 class="mb-2 uppercase sm:text-6xl">{title}</h1>
+      <h1 class="mb-2 uppercase sm:text-6xl">{event.title}</h1>
 
       <hr class="my-2 border-gray-300" />
 

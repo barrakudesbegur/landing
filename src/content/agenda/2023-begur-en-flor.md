@@ -1,10 +1,15 @@
 ---
 title: Bermut musical per Begur en Flor 2023
 description: 🌸 Passa't per aquest esplèndid vermut musical 🌹
-startDate: 2023-05-14 20:30
+startDate: 2023-05-14 12:30
+endDate: 2023-05-14 14:00
 publicationDate: 2023-04-27 20:00
 image: /events/2023-begur-en-flor.jpg
 igPost: https://www.instagram.com/p/CrjWKtetOAN/
+location: Plaça Esteva i Cruañas, Begur
+performers:
+  - name: DJ Marc Dunjó
+    url: https://www.instagram.com/marcdunjo
 ---
 
 El 12, 13 i 14 de maig, se celebra Begur en Flor, i aquest any estem molt contentes de poder anunciar que hi participem!
@@ -27,7 +32,7 @@ Dissabte 14 de maig.
 
 ## Lloc
 
-📍 Plaça Esteva i Cruañas a Begur.
+📍 Plaça Esteva i Cruañas, Begur
 
 ## Artistes
 

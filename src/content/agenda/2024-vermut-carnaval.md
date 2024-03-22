@@ -1,10 +1,15 @@
 ---
 title: Vermut musical de Carnaval 2024
 description: Vine a passar una bona estona amb nosaltres!
-startDate: 2024-02-24 23:00
+startDate: 2024-02-24 12:00
+endDate: 2024-02-24 14:00
 publicationDate: 2024-02-19 16:47
 image: /events/2024-vermut-carnaval.jpg
 igPost: https://www.instagram.com/p/C3iUwp8t39d/
+location: Plaça Esteva i Cruañas, Begur
+performers:
+  - name: DJ Marc Dunjó
+    url: https://www.instagram.com/marcdunjo
 ---
 
 Que sí que sí!!! Clar que farem el vermut que us vam prometre, i aquest cap de setmana ❤️‍🔥
@@ -29,7 +34,7 @@ Dissabte 24 de febrer.
 
 ## Lloc
 
-📍 Plaça Esteva i Cruañas a Begur.
+📍 Plaça Esteva i Cruañas, Begur
 
 ## Artistes
 

@@ -2,9 +2,18 @@
 title: Festa Major de Begur 2022
 description: La primera festa jove a Begur organitzada per Barrakudes! 🥇
 startDate: 2022-06-28 23:00
+endDate: 2022-06-29 3:00
 publicationDate: 2022-06-09 21:30
 image: /events/2022-festa-major.jpg
 igPost: https://www.instagram.com/p/CemYMP0tCTC/
+location: Parc de l'Arbreda, Begur
+performers:
+  - name: FESTUCS
+    url: https://www.instagram.com/festucs_
+  - name: Kharloss Selektah
+    url: https://www.instagram.com/kharloss_selektah
+  - name: Animal dj's
+    url: https://www.instagram.com/animal_djs
 ---
 
 Reserveu-vos el dia! 📍
@@ -30,7 +39,7 @@ Dissabte 28 de juny.
 
 ## Lloc
 
-📍 Parc de l'Arbreda de Begur.
+📍 Parc de l'Arbreda, Begur
 
 ## Artistes
 

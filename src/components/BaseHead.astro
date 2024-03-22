@@ -1,13 +1,24 @@
 ---
+import { Schema } from 'astro-seo-schema'
+import type { ComponentProps } from 'astro/types'
+
 export interface Props {
   title: string
   description: string
   image?: string
+  schemas?: ComponentProps<typeof Schema>[]
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site)
 
-const { title, description, image = '/placeholder-social.jpg' } = Astro.props
+const {
+  title,
+  description,
+  image = '/placeholder-social.jpg',
+  schemas,
+} = Astro.props
+
+console.log(schemas)
 ---
 
 <!-- Global Metadata -->
@@ -58,3 +69,5 @@ const { title, description, image = '/placeholder-social.jpg' } = Astro.props
 <link rel="manifest" href="/site.webmanifest" />
 <link rel="mask-icon" href="/icons/safari-pinned-tab.svg" color="#ff8300" />
 <meta name="theme-color" content="#ff8300" />
+
+{schemas?.map((schema) => <Schema {...schema} />)}

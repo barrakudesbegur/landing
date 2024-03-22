@@ -12,15 +12,25 @@ const agenda = defineCollection({
       .string()
       .or(z.date())
       .transform((val) => new Date(val)),
-    updatedDate: z
+    endDate: z
       .string()
+      .or(z.date())
       .optional()
-      .transform((str) => (str ? new Date(str) : undefined)),
+      .transform((val) => (val ? new Date(val) : undefined)),
     image: z.string().optional(),
+    location: z.string().optional(),
     igPost: z
       .string()
       .url()
       .startsWith('https://www.instagram.com/p/')
+      .optional(),
+    performers: z
+      .array(
+        z.object({
+          name: z.string(),
+          url: z.string().url().optional(),
+        }),
+      )
       .optional(),
   }),
 })

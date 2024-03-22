@@ -2,9 +2,16 @@
 title: Festa de Santa Reparada 2022
 description: Ei! Que s'ha acabat l'estiu, però encara tenim ganes de Festa!!! 🤪
 startDate: 2022-09-17 23:30
+endDate: 2022-09-18 3:00
 publicationDate: 2022-09-09 17:30
 image: /events/2022-santa-reparada.jpg
 igPost: https://www.instagram.com/p/CiS21m1NJOp/
+location: Plaça Esteva i Cruañas, Begur
+performers:
+  - name: Kharloss Selektah
+    url: https://www.instagram.com/kharloss_selektah
+  - name: IvanOte
+    url: https://www.instagram.com/ivanote
 ---
 
 📣 Ei! Que s'ha acabat l'estiu, però els BARRAKUDES encara tenim ganes de Festa!!! 🤪
@@ -27,7 +34,7 @@ Dissabte 17 de setembre.
 
 ## Lloc
 
-📍 Plaça Esteva i Cruañas a Begur.
+📍 Plaça Esteva i Cruañas, Begur
 
 ## Artistes
 

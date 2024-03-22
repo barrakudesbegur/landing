@@ -1,10 +1,15 @@
 ---
 title: Vermut musical final d'estiu 2022
 description: Vermut musical 🎧, per si et ve de gust fer poble 🍻🍸
-startDate: 2022-09-18 23:00
+startDate: 2022-09-18 12:00
+endDate: 2022-09-18 14:00
 publicationDate: 2022-09-05 21:45
 image: /events/2022-vermut-final-estiu.jpg
 igPost: https://www.instagram.com/p/CiI_6SZNLyb/
+location: Plaça Esteva i Cruañas, Begur
+performers:
+  - name: DJ Marc Dunjó
+    url: https://www.instagram.com/marcdunjo
 ---
 
 I per si no en teniu prou o us ve de gust fer poble i passar-ho bé, ens trobem el diumenge al vermut musical amb 🎧 [DJ Marc Dunjó](https://www.instagram.com/marcdunjo) 🍻🍸
@@ -23,7 +28,7 @@ Dissabte 18 de setembre.
 
 ## Lloc
 
-📍 Plaça Esteva i Cruañas a Begur.
+📍 Plaça Esteva i Cruañas, Begur
 
 ## Artistes
 
