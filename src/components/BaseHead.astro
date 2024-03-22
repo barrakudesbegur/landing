@@ -70,11 +70,11 @@ const {
 <meta name="theme-color" content="#ff8300" />
 
 <!-- Analytics -->
-<Umami
-  dataId="49cea999-3d80-4d02-baed-c48c230c2ff7"
-  site="https://eu.umami.is"
-  host="/script.js"
-/>
+<script
+  defer
+  src="https://eu.umami.is/script.js"
+  data-website-id="49cea999-3d80-4d02-baed-c48c230c2ff7"
+></script>
 
 <!-- JSON-LD Schemas -->
 {schemas?.map((schema) => <Schema {...schema} />)}
