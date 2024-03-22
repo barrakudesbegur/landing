@@ -2,7 +2,7 @@
 title: Festa Santa 2024
 description: Celebra que ja és Setmana Santa amb la Santa Festa ⚡️
 startDate: 2024-03-30 23:00
-endDate:  2024-03-31 3:30
+endDate: 2024-03-31 3:30
 publicationDate: 2024-03-10 19:30
 location: Parc de l'Arbreda, Begur
 image: /events/2024-festa-santa.jpg
