@@ -6,6 +6,7 @@ endDate: 2023-09-17 3:00
 publicationDate: 2023-09-07 21:12
 image: /events/2023-santa-reparada.jpg
 igPost: https://www.instagram.com/p/Cw577jgNigv/
+price: 0
 location: arbreda
 performers:
   - name: DJ Marc Dunjó

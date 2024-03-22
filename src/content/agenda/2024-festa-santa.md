@@ -7,6 +7,7 @@ publicationDate: 2024-03-10 19:30
 location: arbreda
 image: /events/2024-festa-santa.jpg
 igPost: https://www.instagram.com/p/C4WHPtbtYsL/
+price: 0
 performers:
   - name: DJ Calvins
     url: https://www.instagram.com/djcalvins_

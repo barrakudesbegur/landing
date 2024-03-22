@@ -27,4 +27,10 @@ export const eventSchema = (
       name: performer.name,
       sameAs: performer.url,
     })),
+    offers: {
+      '@type': 'Offer',
+      price: event.price,
+      priceCurrency: 'EUR',
+      availability: 'https://schema.org/InStock',
+    },
   }) as const satisfies WithContext<MusicEvent>

@@ -6,6 +6,7 @@ endDate: 2022-09-18 3:00
 publicationDate: 2022-09-09 17:30
 image: /events/2022-santa-reparada.jpg
 igPost: https://www.instagram.com/p/CiS21m1NJOp/
+price: 0
 location: esteva-i-cruanas
 performers:
   - name: Kharloss Selektah

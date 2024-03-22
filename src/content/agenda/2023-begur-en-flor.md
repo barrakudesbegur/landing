@@ -6,6 +6,7 @@ endDate: 2023-05-14 14:00
 publicationDate: 2023-04-27 20:00
 image: /events/2023-begur-en-flor.jpg
 igPost: https://www.instagram.com/p/CrjWKtetOAN/
+price: 0
 location: esteva-i-cruanas
 performers:
   - name: DJ Marc Dunjó

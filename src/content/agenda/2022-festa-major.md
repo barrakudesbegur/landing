@@ -6,6 +6,7 @@ endDate: 2022-06-29 3:00
 publicationDate: 2022-06-09 21:30
 image: /events/2022-festa-major.jpg
 igPost: https://www.instagram.com/p/CemYMP0tCTC/
+price: 0
 location: arbreda
 performers:
   - name: FESTUCS
