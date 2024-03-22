@@ -1,6 +1,7 @@
 import type { CollectionEntry } from 'astro:content'
 import type { MusicEvent, WithContext } from 'schema-dts'
 import { organizationSchema } from './organization'
+import { placeSchemas } from './place'
 
 export const eventSchema = (
   event: CollectionEntry<'agenda'>['data'],
@@ -19,9 +20,7 @@ export const eventSchema = (
     eventStatus: 'https://schema.org/EventScheduled',
     startDate: event.startDate.toISOString(),
     endDate: event.endDate?.toISOString(),
-    location: event.location
-      ? [{ '@type': 'Place', name: event.location }]
-      : undefined,
+    location: event.location ? placeSchemas[event.location] : undefined,
     organizer: organizationSchema,
     performer: event.performers?.map((performer) => ({
       '@type': 'PerformingGroup',

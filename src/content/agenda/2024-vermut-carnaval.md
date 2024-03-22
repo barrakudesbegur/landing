@@ -6,7 +6,7 @@ endDate: 2024-02-24 14:00
 publicationDate: 2024-02-19 16:47
 image: /events/2024-vermut-carnaval.jpg
 igPost: https://www.instagram.com/p/C3iUwp8t39d/
-location: Plaça Esteva i Cruañas, Begur
+location: esteva-i-cruanas
 performers:
   - name: DJ Marc Dunjó
     url: https://www.instagram.com/marcdunjo

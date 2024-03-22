@@ -1,5 +1,9 @@
 import { defineCollection, z } from 'astro:content'
 
+const placeNames = ['arbreda', 'esteva-i-cruanas'] as const
+
+export type PlaceName = (typeof placeNames)[number]
+
 const agenda = defineCollection({
   schema: z.object({
     title: z.string(),
@@ -18,7 +22,7 @@ const agenda = defineCollection({
       .optional()
       .transform((val) => (val ? new Date(val) : undefined)),
     image: z.string().optional(),
-    location: z.string().optional(),
+    location: z.enum(placeNames).optional(),
     igPost: z
       .string()
       .url()

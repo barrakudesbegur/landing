@@ -6,7 +6,7 @@ endDate: 2022-09-18 14:00
 publicationDate: 2022-09-05 21:45
 image: /events/2022-vermut-final-estiu.jpg
 igPost: https://www.instagram.com/p/CiI_6SZNLyb/
-location: Plaça Esteva i Cruañas, Begur
+location: esteva-i-cruanas
 performers:
   - name: DJ Marc Dunjó
     url: https://www.instagram.com/marcdunjo
