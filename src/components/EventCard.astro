@@ -8,19 +8,19 @@ const { event } = Astro.props
 ---
 
 <a
-  class="bg-white text-black leading-none shadow-lg flex justify-between items-center pt-4 min-[420px]:pt-0 min-[420px]:flex-row flex-col focus-visible:ring-4 ring-black/50 rounded-lg outline-none"
+  class="flex flex-col items-center justify-between rounded-lg bg-white pt-4 leading-none text-black shadow-lg outline-none ring-black/50 focus-visible:ring-4 min-[420px]:flex-row min-[420px]:pt-0"
   href={`/agenda/${event.slug}/`}
 >
   <img
-    class="min-[420px]:max-w-[8rem] max-h-40 min-[420px]:rounded-l-lg min-[420px]:rounded-r-none rounded shadow-md min-[420px]:shadow-none"
+    class="max-h-40 rounded shadow-md min-[420px]:max-w-[8rem] min-[420px]:rounded-l-lg min-[420px]:rounded-r-none min-[420px]:shadow-none"
     src={event.data.image}
     alt=""
   />
-  <div class="grow self-stretch p-4 flex flex-col justify-between">
-    <h3 class="font-bold text-lg">{event.data.title}</h3>
+  <div class="flex grow flex-col justify-between self-stretch p-4">
+    <h3 class="text-lg font-bold">{event.data.title}</h3>
     <p class="grow leading-normal">{event.data.description}</p>
     <FormattedDate
-      class="text-gray-700 min-[420px]:mt-0 mt-4"
+      class="mt-4 text-gray-700 min-[420px]:mt-0"
       date={event.data.startDate}
     />
     <div></div>

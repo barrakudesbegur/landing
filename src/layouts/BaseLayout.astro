@@ -11,13 +11,13 @@ type Props = BaseHeadProps & { class?: string }
 const { class: classList, ...props } = Astro.props
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ca-ES" class="scroll-smooth">
   <head>
     <BaseHead {...props} />
   </head>
 
-  <body class:list={['bg-slate-50 text-slate-900 min-h-[100vh]', classList]}>
+  <body class:list={['min-h-[100vh] bg-slate-50 text-slate-900', classList]}>
     <Header />
 
     <slot />
