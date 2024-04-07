@@ -20,7 +20,7 @@ export const organizationSchema = {
     '@type': 'Place',
     name: 'Begur',
   },
-  email: 'barrakudesassociaciojuvenil@gmail.com',
+  email: 'hola@barrakudesbegur.org',
   taxID: 'G10808830',
   sameAs: [
     'https://www.instagram.com/barrakudesbegur',
