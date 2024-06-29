@@ -29,7 +29,7 @@ No us ho podeu perdree!! Us hi esperem a tots i totes 🫶🏽
 
 ## Horari
 
-Dissabte 20 d'abril.
+Dissabte 29 de juny.
 
 - Sopar a partir de les 21:30.
 - Festa de les les 23:30 a les 5:00.
