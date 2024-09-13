@@ -2,7 +2,7 @@
 title: Festa de Santa Reparada 2024
 description: Ja torna la festa de santa reparada 💃🏽🧡
 startDate: 2024-09-14 23:00
-endDate: 2024-09-15 3:00
+endDate: 2024-09-15 4:00
 publicationDate: 2024-09-01 20:00
 location: arbreda
 image: /events/2024-santa-reparada.jpg
@@ -36,7 +36,7 @@ Ens veiem molt i moooolt aviat!
 Dissabte 14 de setembre.
 
 - A partir de les 23:00.
-- Fins les 3:00.
+- Fins les 4:00.
 
 ## Lloc
 
