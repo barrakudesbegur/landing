@@ -100,3 +100,16 @@ const entryNotes = event.entry?.notes ?? []
     </>
   )
 }
+
+{
+  event.igPostId && (
+    <>
+      <h2>Publicació</h2>
+      <p>
+        <a href={`https://www.instagram.com/p/${event.igPostId}/`} target="_blank" rel="noopener noreferrer">
+          Veure publicació a Instagram
+        </a>
+      </p>
+    </>
+  )
+}

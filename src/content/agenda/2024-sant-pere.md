@@ -6,7 +6,7 @@ endDate: 2024-06-30 5:00
 publicationDate: 2024-06-12 20:00
 location: arbreda
 image: /events/2024-sant-pere.jpg
-igPost: https://www.instagram.com/p/C8IQK-_NMGD/
+igPostId: 'C8IQK-_NMGD'
 performers:
   - orquestra-maribel
   - animal-djs

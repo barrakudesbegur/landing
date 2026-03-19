@@ -6,7 +6,7 @@ endDate: 2026-04-04 2:30
 publicationDate: 2026-03-12 18:24
 location: esteva-i-cruanas
 image: /events/2026-santa-festa.jpg
-igPost: https://www.instagram.com/p/DVy0wO4gm27/
+igPostId: 'DVy0wO4gm27'
 performers:
   - dj-calvins
   - dj-marc-dunjo

@@ -5,7 +5,7 @@ startDate: 2022-09-17 23:30
 endDate: 2022-09-18 3:00
 publicationDate: 2022-09-09 17:30
 image: /events/2022-santa-reparada.jpg
-igPost: https://www.instagram.com/p/CiS21m1NJOp/
+igPostId: 'CiS21m1NJOp'
 location: esteva-i-cruanas
 performers:
   - kharloss-selektah

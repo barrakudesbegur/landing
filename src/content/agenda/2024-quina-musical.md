@@ -6,7 +6,7 @@ endDate: 2024-12-27 23:00
 publicationDate: 2024-12-10 20:00
 location: esteva-i-cruanas
 image: /events/2024-quina-musical.jpg
-igPost: https://www.instagram.com/p/DDZYKNaCfH4/
+igPostId: 'DDZYKNaCfH4'
 performers:
   - dj-marc-dunjo
 schedule:

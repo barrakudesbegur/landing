@@ -6,7 +6,7 @@ endDate: 2024-04-21 3:30
 publicationDate: 2024-04-08 19:30
 location: arbreda
 image: /events/2024-festa-santa-2.jpg
-igPost: https://www.instagram.com/p/C5eKF2OtLX4/
+igPostId: 'C5eKF2OtLX4'
 performers:
   - dj-calvins
   - ivanote

@@ -50,11 +50,7 @@ const agenda = defineCollection({
       .transform((val) => (val ? new Date(val) : undefined)),
     image: z.string().optional(),
     location: reference('places').optional(),
-    igPost: z
-      .string()
-      .url()
-      .startsWith('https://www.instagram.com/p/')
-      .optional(),
+    igPostId: z.string().optional(),
     performers: z.array(reference('performers')).optional(),
     schedule: z
       .object({

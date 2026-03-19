@@ -5,7 +5,7 @@ startDate: 2023-07-01 20:30
 endDate: 2023-07-02 3:00
 publicationDate: 2023-06-26 20:16
 image: /events/2023-sant-pere.jpg
-igPost: https://www.instagram.com/p/Ct93fl0N0sY/
+igPostId: 'Ct93fl0N0sY'
 location: arbreda
 performers:
   - the-papas-and-the-popos

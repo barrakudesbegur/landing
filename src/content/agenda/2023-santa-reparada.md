@@ -5,7 +5,7 @@ startDate: 2023-09-16 23:00
 endDate: 2023-09-17 3:00
 publicationDate: 2023-09-07 21:12
 image: /events/2023-santa-reparada.jpg
-igPost: https://www.instagram.com/p/Cw577jgNigv/
+igPostId: 'Cw577jgNigv'
 location: arbreda
 performers:
   - dj-marc-dunjo

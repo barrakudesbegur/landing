@@ -6,7 +6,7 @@ endDate: 2024-06-23 13:00
 publicationDate: 2024-06-12 20:00
 location: esteva-i-cruanas
 image: /events/2024-puja-i-baixa-ai.jpg
-igPost: https://www.instagram.com/p/C8j3DJLNb8j/
+igPostId: 'C8j3DJLNb8j'
 schedule:
   details:
     - De 7:00 a 13:00.

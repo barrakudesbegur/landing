@@ -6,7 +6,7 @@ endDate: 2024-09-15 4:00
 publicationDate: 2024-09-01 20:00
 location: arbreda
 image: /events/2024-santa-reparada.jpg
-igPost: https://www.instagram.com/p/C_Y3KSyNMm4/
+igPostId: 'C_Y3KSyNMm4'
 performers:
   - la-masovera-barbuda
   - dj-marc-dunjo
