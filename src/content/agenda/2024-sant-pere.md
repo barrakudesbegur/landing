@@ -8,12 +8,9 @@ location: arbreda
 image: /events/2024-sant-pere.jpg
 igPost: https://www.instagram.com/p/C8IQK-_NMGD/
 performers:
-  - name: Orquestra Maribel
-    url: https://www.instagram.com/orquestramaribel
-  - name: Animal DJs
-    url: https://www.instagram.com/animal_djs
-  - name: Ona Giner
-    url: https://www.instagram.com/onaginer
+  - orquestra-maribel
+  - animal-djs
+  - ona-giner
 schedule:
   details:
     - Sopar a partir de les 21:30.

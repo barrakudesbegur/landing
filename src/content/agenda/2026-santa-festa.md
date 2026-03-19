@@ -8,10 +8,8 @@ location: esteva-i-cruanas
 image: /events/2026-santa-festa.jpg
 igPost: https://www.instagram.com/p/DVy0wO4gm27/
 performers:
-  - name: DJ Calvins
-    url: https://www.instagram.com/djcalvins_
-  - name: DJ Marc Dunjó
-    url: https://www.instagram.com/marcdunjo
+  - dj-calvins
+  - dj-marc-dunjo
 schedule:
   details:
     - A partir de les 23:00.

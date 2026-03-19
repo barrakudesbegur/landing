@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection } from 'astro:content'
+import { type CollectionEntry, getCollection, getEntry, getEntries } from 'astro:content'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import { SITE_TITLE } from '../../consts'
 import { eventSchema } from '../../jsonld-schemas/event'
@@ -9,15 +9,19 @@ export async function getStaticPaths() {
   const events = await getCollection('agenda')
   return events.map((event) => ({
     params: { slug: event.slug },
-    props: event,
+    props: { event },
   }))
 }
-type Props = CollectionEntry<'agenda'>
 
-const eventPost = Astro.props
-const { Content } = await eventPost.render()
+type Props = { event: CollectionEntry<'agenda'> }
 
-const event = eventPost.data
+const { event: eventEntry } = Astro.props
+const { Content } = await eventEntry.render()
+const event = eventEntry.data
+
+const place = event.location ? await getEntry(event.location) : undefined
+const performers = event.performers ? await getEntries(event.performers) : []
+const resolvedPerformers = performers.map((p) => p.data)
 ---
 
 <BaseLayout
@@ -25,7 +29,13 @@ const event = eventPost.data
   description={event.description}
   image={event.image}
   schemas={[
-    { item: eventSchema(event, { eventPageUrl: Astro.url.toString() }) },
+    {
+      item: eventSchema(event, {
+        eventPageUrl: Astro.url.toString(),
+        performers: resolvedPerformers,
+        place: place?.data,
+      }),
+    },
   ]}
 >
   <main class="px-4">
@@ -40,7 +50,7 @@ const event = eventPost.data
       <hr class="my-2 border-gray-300" />
 
       <Content />
-      <EventDetailsSections event={event} />
+      <EventDetailsSections event={event} place={place?.data} performers={resolvedPerformers} />
     </article>
   </main>
 </BaseLayout>

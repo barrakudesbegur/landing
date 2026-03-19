@@ -8,12 +8,9 @@ image: /events/2023-sant-pere.jpg
 igPost: https://www.instagram.com/p/Ct93fl0N0sY/
 location: arbreda
 performers:
-  - name: The Papa's and The Popo's
-    url: https://www.thepapasandthepopos.com/
-  - name: Kharloss Selektah
-    url: https://www.instagram.com/kharloss_selektah/
-  - name: DJ Evelyn
-    url: https://www.instagram.com/djevelynn
+  - the-papas-and-the-popos
+  - kharloss-selektah
+  - dj-evelyn
 schedule:
   details:
     - Sopar a partir de les 20:30.

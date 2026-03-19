@@ -8,8 +8,7 @@ image: /events/2024-vermut-carnaval.jpg
 igPost: https://www.instagram.com/p/C3iUwp8t39d/
 location: esteva-i-cruanas
 performers:
-  - name: DJ Marc Dunjó
-    url: https://www.instagram.com/marcdunjo
+  - dj-marc-dunjo
 schedule:
   details:
     - A les 12:00.

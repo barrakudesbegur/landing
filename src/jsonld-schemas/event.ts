@@ -1,11 +1,23 @@
 import type { CollectionEntry } from 'astro:content'
-import type { MusicEvent, WithContext } from 'schema-dts'
+import type {
+  MusicEvent,
+  Offer,
+  PerformingGroup,
+  Place,
+  WithContext,
+} from 'schema-dts'
 import { organizationSchema } from './organization'
-import { placeSchemas } from './place'
+
+type PlaceData = CollectionEntry<'places'>['data']
+type PerformerData = CollectionEntry<'performers'>['data']
 
 export const eventSchema = (
   event: CollectionEntry<'agenda'>['data'],
-  { eventPageUrl }: { eventPageUrl: string },
+  {
+    eventPageUrl,
+    performers,
+    place,
+  }: { eventPageUrl: string; performers: PerformerData[]; place?: PlaceData },
 ) =>
   ({
     '@context': 'https://schema.org',
@@ -20,19 +32,33 @@ export const eventSchema = (
     eventStatus: 'https://schema.org/EventScheduled',
     startDate: event.startDate.toISOString(),
     endDate: event.endDate?.toISOString(),
-    location: event.location ? placeSchemas[event.location] : undefined,
+    location:
+      place &&
+      ({
+        '@type': 'Place',
+        name: place.name,
+        address: { '@type': 'PostalAddress', ...place.address },
+        geo: { '@type': 'GeoCoordinates', ...place.geo },
+        sameAs: place.sameAs,
+      } satisfies Place),
     organizer: organizationSchema,
-    performer: event.performers?.map((performer) => ({
-      '@type': 'PerformingGroup',
-      name: performer.name,
-      sameAs: performer.url,
-    })),
+    performer:
+      performers.length > 0
+        ? performers.map(
+            (p) =>
+              ({
+                '@type': 'PerformingGroup',
+                name: p.name,
+                sameAs: p.url,
+              }) satisfies PerformingGroup,
+          )
+        : undefined,
     offers: {
       '@type': 'Offer',
-      price: event.entry.price,
+      price: event.entry.price ?? 0,
       priceCurrency: 'EUR',
-      url: event?.buyTicketsUrl ?? eventPageUrl,
+      url: event.buyTicketsUrl ?? eventPageUrl,
       validFrom: event.publicationDate.toISOString(),
       availability: 'https://schema.org/InStock',
-    },
+    } satisfies Offer,
   }) as const satisfies WithContext<MusicEvent>

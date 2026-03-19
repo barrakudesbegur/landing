@@ -1,8 +1,35 @@
-import { defineCollection, z } from 'astro:content'
+import { defineCollection, reference, z } from 'astro:content'
 
-const placeNames = ['arbreda', 'esteva-i-cruanas'] as const
+const addressSchema = z.object({
+  streetAddress: z.string(),
+  addressLocality: z.string(),
+  addressRegion: z.string(),
+  postalCode: z.string(),
+  addressCountry: z.string(),
+})
 
-export type PlaceName = (typeof placeNames)[number]
+const geoSchema = z.object({
+  latitude: z.number(),
+  longitude: z.number(),
+})
+
+const places = defineCollection({
+  type: 'data',
+  schema: z.object({
+    name: z.string(),
+    address: addressSchema,
+    geo: geoSchema,
+    sameAs: z.string().url(),
+  }),
+})
+
+const performers = defineCollection({
+  type: 'data',
+  schema: z.object({
+    name: z.string(),
+    url: z.string().url().optional(),
+  }),
+})
 
 const agenda = defineCollection({
   schema: z.object({
@@ -22,20 +49,13 @@ const agenda = defineCollection({
       .optional()
       .transform((val) => (val ? new Date(val) : undefined)),
     image: z.string().optional(),
-    location: z.enum(placeNames).optional(),
+    location: reference('places').optional(),
     igPost: z
       .string()
       .url()
       .startsWith('https://www.instagram.com/p/')
       .optional(),
-    performers: z
-      .array(
-        z.object({
-          name: z.string(),
-          url: z.string().url().optional(),
-        }),
-      )
-      .optional(),
+    performers: z.array(reference('performers')).optional(),
     schedule: z
       .object({
         details: z.array(z.string()).optional(),
@@ -53,4 +73,4 @@ const agenda = defineCollection({
   }),
 })
 
-export const collections = { agenda }
+export const collections = { agenda, places, performers }

@@ -8,10 +8,8 @@ location: arbreda
 image: /events/2024-festa-santa-2.jpg
 igPost: https://www.instagram.com/p/C5eKF2OtLX4/
 performers:
-  - name: DJ Calvins
-    url: https://www.instagram.com/djcalvins_
-  - name: IvanOte
-    url: https://www.instagram.com/ivanote
+  - dj-calvins
+  - ivanote
 schedule:
   details:
     - A partir de les 23:00.

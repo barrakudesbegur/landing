@@ -8,8 +8,7 @@ location: esteva-i-cruanas
 image: /events/2024-quina-musical.jpg
 igPost: https://www.instagram.com/p/DDZYKNaCfH4/
 performers:
-  - name: DJ Marc Dunjó
-    url: https://www.instagram.com/marcdunjo
+  - dj-marc-dunjo
 schedule:
   details:
     - A les 18:00.

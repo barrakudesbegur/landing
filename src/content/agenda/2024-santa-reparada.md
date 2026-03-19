@@ -8,12 +8,9 @@ location: arbreda
 image: /events/2024-santa-reparada.jpg
 igPost: https://www.instagram.com/p/C_Y3KSyNMm4/
 performers:
-  - name: La Masovera Barbuda
-    url: https://www.instagram.com/masovera.barbuda
-  - name: DJ Marc Dunjó
-    url: https://www.instagram.com/marcdunjo
-  - name: Félix Torra
-    url: https://www.instagram.com/felixtorra
+  - la-masovera-barbuda
+  - dj-marc-dunjo
+  - felix-torra
 schedule:
   details:
     - A partir de les 23:00.

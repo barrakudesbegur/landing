@@ -8,8 +8,7 @@ image: /events/2022-vermut-final-estiu.jpg
 igPost: https://www.instagram.com/p/CiI_6SZNLyb/
 location: esteva-i-cruanas
 performers:
-  - name: DJ Marc Dunjó
-    url: https://www.instagram.com/marcdunjo
+  - dj-marc-dunjo
 schedule:
   details:
     - A les 12:00.

@@ -1,0 +1,11 @@
+name: "Parc de l'Arbreda, Begur"
+address:
+  streetAddress: Carrer Carles de Vilademany, 6
+  addressLocality: Begur
+  addressRegion: Girona
+  postalCode: "17255"
+  addressCountry: ES
+geo:
+  latitude: 41.95430933790201
+  longitude: 3.2039121027189035
+sameAs: https://maps.app.goo.gl/GqVkuncvcwUR41JZ9

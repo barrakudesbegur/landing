@@ -8,10 +8,8 @@ image: /events/2022-santa-reparada.jpg
 igPost: https://www.instagram.com/p/CiS21m1NJOp/
 location: esteva-i-cruanas
 performers:
-  - name: Kharloss Selektah
-    url: https://www.instagram.com/kharloss_selektah
-  - name: IvanOte
-    url: https://www.instagram.com/ivanote
+  - kharloss-selektah
+  - ivanote
 schedule:
   details:
     - A partir de les 23:30.

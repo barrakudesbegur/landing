@@ -8,10 +8,8 @@ image: /events/2023-santa-reparada.jpg
 igPost: https://www.instagram.com/p/Cw577jgNigv/
 location: arbreda
 performers:
-  - name: DJ Marc Dunjó
-    url: https://www.instagram.com/marcdunjo
-  - name: IvanOte
-    url: https://www.instagram.com/ivanote
+  - dj-marc-dunjo
+  - ivanote
 schedule:
   details:
     - A partir de les 23:00.

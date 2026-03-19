@@ -8,12 +8,9 @@ image: /events/2022-festa-major.jpg
 igPost: https://www.instagram.com/p/CemYMP0tCTC/
 location: arbreda
 performers:
-  - name: FESTUCS
-    url: https://www.instagram.com/festucs_
-  - name: Kharloss Selektah
-    url: https://www.instagram.com/kharloss_selektah
-  - name: Animal dj's
-    url: https://www.instagram.com/animal_djs
+  - festucs
+  - kharloss-selektah
+  - animal-djs
 schedule:
   details:
     - Sopar a partir de les 20:30.

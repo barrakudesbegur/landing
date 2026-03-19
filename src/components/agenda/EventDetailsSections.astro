@@ -3,14 +3,11 @@ import type { CollectionEntry } from 'astro:content'
 
 type Props = {
   event: CollectionEntry<'agenda'>['data']
+  place?: CollectionEntry<'places'>['data']
+  performers: CollectionEntry<'performers'>['data'][]
 }
 
-const { event } = Astro.props
-
-const placeLabels = {
-  arbreda: "Parc de l'Arbreda, Begur",
-  'esteva-i-cruanas': 'Plaça Esteva i Cruañas, Begur',
-} as const
+const { event, place, performers } = Astro.props
 
 const scheduleDateLabel = (() => {
   const formattedDate = new Intl.DateTimeFormat('ca-ES', {
@@ -59,20 +56,20 @@ const entryNotes = event.entry?.notes ?? []
 }
 
 {
-  event.location && (
+  place && (
     <>
       <h2>Lloc</h2>
-      <p>📍 {placeLabels[event.location]}</p>
+      <p>📍 {place.name}</p>
     </>
   )
 }
 
 {
-  event.performers && event.performers.length > 0 && (
+  performers.length > 0 && (
     <>
       <h2>Artistes</h2>
       <ul>
-        {event.performers.map((performer) => (
+        {performers.map((performer) => (
           <li>
             {performer.url ? (
               <a href={performer.url}>{performer.name}</a>
