@@ -5,6 +5,7 @@ import Footer from '../components/Footer.astro'
 import Header from '../components/Header.astro'
 import '@fontsource/londrina-solid'
 import '@fontsource/inter'
+import '../styles/global.css'
 
 type Props = BaseHeadProps & { class?: string }
 
@@ -17,7 +18,7 @@ const { class: classList, ...props } = Astro.props
     <BaseHead {...props} />
   </head>
 
-  <body class:list={['min-h-[100vh] bg-slate-50 text-slate-900', classList]}>
+  <body class:list={['min-h-screen bg-slate-50 text-slate-900', classList]}>
     <Header />
 
     <slot />

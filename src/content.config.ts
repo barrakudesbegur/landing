@@ -1,4 +1,6 @@
-import { defineCollection, reference, z } from 'astro:content'
+import { defineCollection, reference } from 'astro:content'
+import { glob, file } from 'astro/loaders'
+import { z } from 'astro/zod'
 
 const addressSchema = z.object({
   streetAddress: z.string(),
@@ -14,7 +16,7 @@ const geoSchema = z.object({
 })
 
 const places = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '**/*.yml', base: './src/content/places' }),
   schema: z.object({
     name: z.string(),
     address: addressSchema,
@@ -24,7 +26,7 @@ const places = defineCollection({
 })
 
 const performers = defineCollection({
-  type: 'data',
+  loader: glob({ pattern: '**/*.yml', base: './src/content/performers' }),
   schema: z.object({
     name: z.string(),
     url: z.string().url().optional(),
@@ -32,6 +34,7 @@ const performers = defineCollection({
 })
 
 const agenda = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/agenda' }),
   schema: z.object({
     title: z.string(),
     description: z.string(),

@@ -1,5 +1,5 @@
 ---
-import { type CollectionEntry, getCollection, getEntry, getEntries } from 'astro:content'
+import { type CollectionEntry, getCollection, getEntry, getEntries, render } from 'astro:content'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import { SITE_TITLE } from '../../consts'
 import { eventSchema } from '../../jsonld-schemas/event'
@@ -8,7 +8,7 @@ import EventDetailsSections from '../../components/agenda/EventDetailsSections.a
 export async function getStaticPaths() {
   const events = await getCollection('agenda')
   return events.map((event) => ({
-    params: { slug: event.slug },
+    params: { slug: event.id },
     props: { event },
   }))
 }
@@ -16,7 +16,7 @@ export async function getStaticPaths() {
 type Props = { event: CollectionEntry<'agenda'> }
 
 const { event: eventEntry } = Astro.props
-const { Content } = await eventEntry.render()
+const { Content } = await render(eventEntry)
 const event = eventEntry.data
 
 const place = event.location ? await getEntry(event.location) : undefined
