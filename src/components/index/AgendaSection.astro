@@ -1,79 +1,116 @@
 ---
 import { getCollection } from 'astro:content'
 import EventCard from '../EventCard.astro'
+
 const today = new Date()
 today.setHours(0, 0, 0, 0)
 
-const upcomingEvents = (await getCollection('agenda'))
-  .filter((event) => event.data.startDate.valueOf() >= today.valueOf())
-  .sort((a, b) => b.data.startDate.valueOf() - a.data.startDate.valueOf())
+const allEvents = (await getCollection('agenda')).sort(
+  (a, b) => b.data.startDate.valueOf() - a.data.startDate.valueOf(),
+)
+
+const hasUpcoming = allEvents.some(
+  (e) => e.data.startDate.valueOf() >= today.valueOf(),
+)
 ---
 
-<div class="scroll-mt-12 bg-brand px-4 py-12 text-white" id="agenda">
+<div
+  class="group bg-brand scroll-mt-12 px-4 py-12 text-white"
+  id="agenda"
+  data-empty={hasUpcoming ? undefined : ''}
+>
   <h2
-    class="mb-6 text-center font-title text-5xl uppercase leading-none tracking-wide"
+    class="font-title mb-6 text-center text-5xl leading-none tracking-wide uppercase"
   >
     Agenda
   </h2>
 
-  {
-    upcomingEvents.length ? (
-      <section>
-        <p class="mb-4 mt-8 text-center text-xl leading-none text-white">
-          Próxims esdeveniments
-        </p>
-        <ul class="mx-auto max-w-xl space-y-4">
-          {upcomingEvents.map((event) => (
-            <li>
-              <EventCard event={event} />
-            </li>
-          ))}
-        </ul>
-        <div class="mt-8 text-center">
-          <a
-            href="/agenda"
-            class="mx-auto inline-block border-b-2 border-orange-300 text-lg font-semibold leading-none text-white"
+  <section class="group-data-empty:hidden">
+    <p class="mt-8 mb-4 text-center text-xl leading-none text-white">
+      Próxims esdeveniments
+    </p>
+    <ul class="mx-auto max-w-xl space-y-4">
+      {
+        allEvents.map((event) => (
+          <li
+            data-start-date={event.data.startDate.toISOString()}
+            data-past={event.data.startDate < today ? '' : undefined}
+            class="data-past:hidden"
           >
-            Veure tots
-          </a>
-        </div>
-      </section>
-    ) : (
-      <section class="mx-auto max-w-xl pb-12 pt-16 text-center text-base">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="mx-auto mb-8 w-12"
-          viewBox="0 0 24 24"
-          stroke-width="1"
-          stroke="currentColor"
-          fill="none"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        >
-          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-          <path d="M9 5h9a2 2 0 0 1 2 2v9m-.184 3.839a2 2 0 0 1 -1.816 1.161h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 1.158 -1.815" />
-          <path d="M16 3v4" />
-          <path d="M8 3v1" />
-          <path d="M4 11h7m4 0h5" />
-          <path d="M3 3l18 18" />
-        </svg>
+            <EventCard event={event} />
+          </li>
+        ))
+      }
+    </ul>
+    <div class="mt-8 text-center">
+      <a
+        href="/agenda"
+        class="mx-auto inline-block border-b-2 border-orange-300 text-lg leading-none font-semibold text-white"
+      >
+        Veure tots
+      </a>
+    </div>
+  </section>
 
-        <p class="text-xl font-bold leading-none text-white">
-          Cap esdeveniment programat
-        </p>
-        <p class="mt-2 text-sm text-orange-100">
-          Estigues atent/a a les nostres xarxes socials!
-        </p>
+  <section
+    class="mx-auto hidden max-w-xl pt-16 pb-12 text-center text-base group-data-empty:block"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="mx-auto mb-8 w-12"
+      viewBox="0 0 24 24"
+      stroke-width="1"
+      stroke="currentColor"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+      <path
+        d="M9 5h9a2 2 0 0 1 2 2v9m-.184 3.839a2 2 0 0 1 -1.816 1.161h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 1.158 -1.815"
+      ></path>
+      <path d="M16 3v4"></path>
+      <path d="M8 3v1"></path>
+      <path d="M4 11h7m4 0h5"></path>
+      <path d="M3 3l18 18"></path>
+    </svg>
 
-        <div class="mt-12 text-center">
-          <a
-            href="/agenda"
-            class="mx-auto inline-block border-b-2 border-orange-300 text-lg font-semibold leading-none text-white"
-          >
-            Veure esdeveniments passats
-          </a>
-        </div>
-      </section>
-    )
-  }
+    <p class="text-xl leading-none font-bold text-white">
+      Cap esdeveniment programat
+    </p>
+    <p class="mt-2 text-sm text-orange-100">
+      Estigues atent/a a les nostres xarxes socials!
+    </p>
+
+    <div class="mt-12 text-center">
+      <a
+        href="/agenda"
+        class="mx-auto inline-block border-b-2 border-orange-300 text-lg leading-none font-semibold text-white"
+      >
+        Veure esdeveniments passats
+      </a>
+    </div>
+  </section>
 </div>
+
+<script>
+  const today = new Date()
+  today.setHours(0, 0, 0, 0)
+  const container = document.getElementById('agenda')
+  if (!container) throw new Error('Agenda container not found')
+  const items = container.querySelectorAll<HTMLLIElement>('li[data-start-date]')
+  let hasUpcoming = false
+
+  items.forEach((li) => {
+    const startDateString = li.dataset.startDate
+    if (!startDateString) throw new Error('Start date not found')
+    const startDate = new Date(startDateString)
+    if (startDate.valueOf() < today.valueOf()) {
+      li.dataset.past = ''
+    } else {
+      hasUpcoming = true
+    }
+  })
+
+  if (!hasUpcoming) container.dataset.empty = ''
+</script>
