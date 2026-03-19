@@ -24,3 +24,11 @@ I ara sí que tot molt ben pensat, perquè tenim una gran carpa i això vol dir 
 Veniu amb els amics, feu unes bones partides, jugueu pels PREMIS i compartiu una tarda de bon rotllo i felicitat! 🫂
 
 Us hi esperem a tots i totes amb molta energia i alegria! 🎁✨
+
+## App
+
+L'aplicació que hem creat per a la quinemusical està disponible a GitHub i és de codi lliure.
+
+Codi font: <https://github.com/barrakudesbegur/quina-musical>
+
+Aplicació: <https://quina.barrakudesbegur.org>

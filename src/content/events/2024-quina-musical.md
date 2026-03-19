@@ -40,3 +40,11 @@ I de moment deixem a l’aire els premis, així teniu una mica d’intriga… No
 🔥 Vine amb la teva colla, fes unes rondes i acaba ballant al ritme de la música de [DJ Marc Dunjó](https://www.instagram.com/marcdunjo)
 
 Us esperem a tots i totes amb moltes ganeeees !!! 🥳🍾🎁🎉
+
+## App
+
+L'aplicació que hem creat per a la quinemusical està disponible a GitHub i és de codi lliure.
+
+Codi font: <https://github.com/barrakudesbegur/quina-musical>
+
+Aplicació: <https://quina.barrakudesbegur.org>
