@@ -36,7 +36,19 @@ const agenda = defineCollection({
         }),
       )
       .optional(),
-    price: z.number().nonnegative().default(0),
+    schedule: z
+      .object({
+        details: z.array(z.string()).optional(),
+        note: z.string().optional(),
+      })
+      .optional(),
+    entry: z
+      .object({
+        price: z.number().nonnegative().default(0),
+        details: z.array(z.string()).optional(),
+        notes: z.array(z.string()).optional(),
+      })
+      .default({ price: 0 }),
     buyTicketsUrl: z.string().url().optional(),
   }),
 })

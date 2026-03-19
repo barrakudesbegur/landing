@@ -6,35 +6,15 @@ endDate: 2022-09-18 14:00
 publicationDate: 2022-09-05 21:45
 image: /events/2022-vermut-final-estiu.jpg
 igPost: https://www.instagram.com/p/CiI_6SZNLyb/
-price: 0
 location: esteva-i-cruanas
 performers:
   - name: DJ Marc Dunjó
     url: https://www.instagram.com/marcdunjo
+schedule:
+  details:
+    - A les 12:00.
 ---
 
 I per si no en teniu prou o us ve de gust fer poble i passar-ho bé, ens trobem el diumenge al vermut musical amb 🎧 [DJ Marc Dunjó](https://www.instagram.com/marcdunjo) 🍻🍸
 
 Estigueu atents a les nostres xarxes socials perquè us anirem donant tota la informació! 🤗
-
-## Poster
-
-![Poster Vermut musical final d'estiu 2022](/events/2022-vermut-final-estiu.jpg)
-
-## Horari
-
-Dissabte 18 de setembre.
-
-- A les 12:00.
-
-## Lloc
-
-📍 Plaça Esteva i Cruañas, Begur
-
-## Artistes
-
-- [DJ Marc Dunjó](https://www.instagram.com/marcdunjo)
-
-## Entrada
-
-Gratuïta :)

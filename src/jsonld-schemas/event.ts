@@ -29,7 +29,7 @@ export const eventSchema = (
     })),
     offers: {
       '@type': 'Offer',
-      price: event.price,
+      price: event.entry.price,
       priceCurrency: 'EUR',
       url: event?.buyTicketsUrl ?? eventPageUrl,
       validFrom: event.publicationDate.toISOString(),

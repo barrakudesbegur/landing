@@ -6,13 +6,15 @@ endDate: 2023-09-17 3:00
 publicationDate: 2023-09-07 21:12
 image: /events/2023-santa-reparada.jpg
 igPost: https://www.instagram.com/p/Cw577jgNigv/
-price: 0
 location: arbreda
 performers:
   - name: DJ Marc Dunjó
     url: https://www.instagram.com/marcdunjo
   - name: IvanOte
     url: https://www.instagram.com/ivanote
+schedule:
+  details:
+    - A partir de les 23:00.
 ---
 
 Per nosaltres encara no s’ha acabat l’estiu… no sense la nostra festa de Santa Reparada! Així doncs, teniu ganes d’acabar-lo a lo grande???
@@ -20,26 +22,3 @@ Per nosaltres encara no s’ha acabat l’estiu… no sense la nostra festa de S
 Segur que sí 😉 Així que ens trobem dissabte 16 de setembre (ja de ja!!!), al parc de l’arbreda de Begur, per passar una bona estona, acompanyats/es, dels [DJ Marc Dunjó](https://www.instagram.com/marcdunjo) i [IvanOte](https://www.instagram.com/ivanote) 🤩
 
 Amb ells, i amb vosaltres, festa assegurada! Ens veiem aviat 🫶🏽
-
-## Poster
-
-![Poster festa de Santa Reparada 2023](/events/2023-santa-reparada.jpg)
-
-## Horari
-
-Dissabte 16 de setembre.
-
-- A partir de les 23:00.
-
-## Lloc
-
-📍 Parc de l'Arbreda, Begur
-
-## Artistes
-
-- [DJ Marc Dunjó](https://www.instagram.com/marcdunjo)
-- [IvanOte](https://www.instagram.com/ivanote)
-
-## Entrada
-
-Gratuïta :)

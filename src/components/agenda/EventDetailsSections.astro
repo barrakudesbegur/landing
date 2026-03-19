@@ -1,0 +1,105 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+type Props = {
+  event: CollectionEntry<'agenda'>['data']
+}
+
+const { event } = Astro.props
+
+const placeLabels = {
+  arbreda: "Parc de l'Arbreda, Begur",
+  'esteva-i-cruanas': 'Plaça Esteva i Cruañas, Begur',
+} as const
+
+const scheduleDateLabel = (() => {
+  const formattedDate = new Intl.DateTimeFormat('ca-ES', {
+    weekday: 'long',
+    day: 'numeric',
+    month: 'long',
+  })
+    .format(event.startDate)
+    .replace(',', '')
+    .trim()
+
+  return `${formattedDate.charAt(0).toUpperCase()}${formattedDate.slice(1)}.`
+})()
+
+const scheduleDetails = event.schedule?.details ?? []
+const price = event.entry.price ?? 0
+const entryDetails =
+  event.entry.details ?? (price === 0 ? ['Gratuïta :)'] : [`${price}€`])
+const entryNotes = event.entry?.notes ?? []
+---
+
+{
+  event.image && (
+    <>
+      <h2>Poster</h2>
+      <img src={event.image} alt={`Poster ${event.title}`} />
+    </>
+  )
+}
+
+{
+  (scheduleDetails.length > 0 || event.schedule?.note) && (
+    <>
+      <h2>Horari</h2>
+      <p>{scheduleDateLabel}</p>
+      {scheduleDetails.length > 0 && (
+        <ul>
+          {scheduleDetails.map((detail) => (
+            <li>{detail}</li>
+          ))}
+        </ul>
+      )}
+      {event.schedule?.note && <p><em>{event.schedule.note}</em></p>}
+    </>
+  )
+}
+
+{
+  event.location && (
+    <>
+      <h2>Lloc</h2>
+      <p>📍 {placeLabels[event.location]}</p>
+    </>
+  )
+}
+
+{
+  event.performers && event.performers.length > 0 && (
+    <>
+      <h2>Artistes</h2>
+      <ul>
+        {event.performers.map((performer) => (
+          <li>
+            {performer.url ? (
+              <a href={performer.url}>{performer.name}</a>
+            ) : (
+              performer.name
+            )}
+          </li>
+        ))}
+      </ul>
+    </>
+  )
+}
+
+{
+  (entryDetails.length > 0 || entryNotes.length > 0) && (
+    <>
+      <h2>Entrada</h2>
+      {entryDetails.length > 0 && (
+        <ul>
+          {entryDetails.map((detail) => (
+            <li>{detail}</li>
+          ))}
+        </ul>
+      )}
+      {entryNotes.map((note) => (
+        <p>{note}</p>
+      ))}
+    </>
+  )
+}
