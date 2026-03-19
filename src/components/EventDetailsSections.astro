@@ -2,7 +2,7 @@
 import type { CollectionEntry } from 'astro:content'
 
 type Props = {
-  event: CollectionEntry<'agenda'>['data']
+  event: CollectionEntry<'events'>['data']
   place?: CollectionEntry<'places'>['data']
   performers: CollectionEntry<'performers'>['data'][]
 }
@@ -50,7 +50,11 @@ const entryNotes = event.entry?.notes ?? []
           ))}
         </ul>
       )}
-      {event.schedule?.note && <p><em>{event.schedule.note}</em></p>}
+      {event.schedule?.note && (
+        <p>
+          <em>{event.schedule.note}</em>
+        </p>
+      )}
     </>
   )
 }
@@ -106,7 +110,11 @@ const entryNotes = event.entry?.notes ?? []
     <>
       <h2>Publicació</h2>
       <p>
-        <a href={`https://www.instagram.com/p/${event.igPostId}/`} target="_blank" rel="noopener noreferrer">
+        <a
+          href={`https://www.instagram.com/p/${event.igPostId}/`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Veure publicació a Instagram
         </a>
       </p>

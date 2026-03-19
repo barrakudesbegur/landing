@@ -1,28 +1,30 @@
 ---
 import type { CollectionEntry } from 'astro:content'
-import FormattedDate from './FormattedDate.astro'
 
-type Props = { event: CollectionEntry<'agenda'> }
+type Props = {
+  event: CollectionEntry<'events'>
+  class?: string
+  style?: string
+}
 
-const { event } = Astro.props
+const { event, class: className, style } = Astro.props
 ---
 
 <a
-  class="flex flex-col items-center justify-between rounded-lg bg-white pt-4 leading-none text-black shadow-lg outline-none ring-black/50 focus-visible:ring-4 min-[420px]:flex-row min-[420px]:pt-0"
-  href={`/agenda/${event.id}/`}
+  href={`/esdeveniments/${event.id}/`}
+  style={style}
+  class:list={[
+    'block overflow-hidden rounded-sm shadow-md',
+    'transition-all duration-300 ease-out',
+    'hover:z-10 hover:scale-110 hover:rotate-0 hover:shadow-2xl',
+    'focus-visible:z-10 focus-visible:scale-110 focus-visible:rotate-0 focus-visible:ring-4 focus-visible:ring-white/50 focus-visible:outline-none',
+    className,
+  ]}
 >
   <img
-    class="max-h-40 rounded shadow-md min-[420px]:max-w-[8rem] min-[420px]:rounded-l-lg min-[420px]:rounded-r-none min-[420px]:shadow-none"
     src={event.data.image}
-    alt=""
+    alt={event.data.title}
+    class="block w-full"
+    loading="lazy"
   />
-  <div class="flex grow flex-col justify-between self-stretch p-4">
-    <h3 class="text-lg font-bold">{event.data.title}</h3>
-    <p class="grow leading-normal">{event.data.description}</p>
-    <FormattedDate
-      class="mt-4 text-gray-700 min-[420px]:mt-0"
-      date={event.data.startDate}
-    />
-    <div></div>
-  </div></a
->
+</a>

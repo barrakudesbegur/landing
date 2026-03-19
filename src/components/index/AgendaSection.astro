@@ -5,9 +5,9 @@ import EventCard from '../EventCard.astro'
 const today = new Date()
 today.setHours(0, 0, 0, 0)
 
-const allEvents = (await getCollection('agenda')).sort(
-  (a, b) => b.data.startDate.valueOf() - a.data.startDate.valueOf(),
-)
+const allEvents = (await getCollection('events'))
+  .filter((e) => e.data.image)
+  .sort((a, b) => b.data.startDate.valueOf() - a.data.startDate.valueOf())
 
 const hasUpcoming = allEvents.some(
   (e) => e.data.startDate.valueOf() >= today.valueOf(),
@@ -16,35 +16,44 @@ const hasUpcoming = allEvents.some(
 
 <div
   class="group bg-brand scroll-mt-12 px-4 py-12 text-white"
-  id="agenda"
+  id="events"
   data-empty={hasUpcoming ? undefined : ''}
 >
   <h2
     class="font-title mb-6 text-center text-5xl leading-none tracking-wide uppercase"
   >
-    Agenda
+    Esdeveniments
   </h2>
 
   <section class="group-data-empty:hidden">
-    <p class="mt-8 mb-4 text-center text-xl leading-none text-white">
-      Próxims esdeveniments
+    <p class="mt-8 mb-6 text-center text-xl leading-none text-white">
+      Pròxims esdeveniments
     </p>
-    <ul class="mx-auto max-w-xl space-y-4">
+    <div class="mx-auto grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-3">
       {
-        allEvents.map((event) => (
-          <li
-            data-start-date={event.data.startDate.toISOString()}
-            data-past={event.data.startDate < today ? '' : undefined}
-            class="data-past:hidden"
-          >
-            <EventCard event={event} />
-          </li>
-        ))
+        allEvents.map((event, i) => {
+          const r = ['-2.5', '1.8', '-1.2', '2.8', '-0.5', '1.5', '-3', '0.8'][
+            i % 8
+          ]
+          return (
+            <div
+              data-start-date={event.data.startDate.toISOString()}
+              data-past={event.data.startDate < today ? '' : undefined}
+              class="data-past:hidden"
+            >
+              <EventCard
+                event={event}
+                style={`--r: ${r}deg`}
+                class="rotate-(--r)"
+              />
+            </div>
+          )
+        })
       }
-    </ul>
+    </div>
     <div class="mt-8 text-center">
       <a
-        href="/agenda"
+        href="/esdeveniments"
         class="mx-auto inline-block border-b-2 border-orange-300 text-lg leading-none font-semibold text-white"
       >
         Veure tots
@@ -84,7 +93,7 @@ const hasUpcoming = allEvents.some(
 
     <div class="mt-12 text-center">
       <a
-        href="/agenda"
+        href="/esdeveniments"
         class="mx-auto inline-block border-b-2 border-orange-300 text-lg leading-none font-semibold text-white"
       >
         Veure esdeveniments passats
@@ -96,17 +105,19 @@ const hasUpcoming = allEvents.some(
 <script>
   const today = new Date()
   today.setHours(0, 0, 0, 0)
-  const container = document.getElementById('agenda')
-  if (!container) throw new Error('Agenda container not found')
-  const items = container.querySelectorAll<HTMLLIElement>('li[data-start-date]')
+  const container = document.getElementById('events')
+  if (!container) throw new Error('Events container not found')
+  const items = container.querySelectorAll<HTMLDivElement>(
+    'div[data-start-date]',
+  )
   let hasUpcoming = false
 
-  items.forEach((li) => {
-    const startDateString = li.dataset.startDate
+  items.forEach((div) => {
+    const startDateString = div.dataset.startDate
     if (!startDateString) throw new Error('Start date not found')
     const startDate = new Date(startDateString)
     if (startDate.valueOf() < today.valueOf()) {
-      li.dataset.past = ''
+      div.dataset.past = ''
     } else {
       hasUpcoming = true
     }

@@ -3,7 +3,7 @@ import { getCollection } from 'astro:content'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
 
 export async function GET(context) {
-  const events = await getCollection('agenda')
+  const events = await getCollection('events')
   return rss({
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
@@ -11,7 +11,7 @@ export async function GET(context) {
     items: events.map((event) => ({
       ...event.data,
       pubDate: event.data.publicationDate,
-      link: `/agenda/${event.id}/`,
+      link: `/esdeveniments/${event.id}/`,
     })),
   })
 }

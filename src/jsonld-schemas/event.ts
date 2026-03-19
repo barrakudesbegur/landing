@@ -12,7 +12,7 @@ type PlaceData = CollectionEntry<'places'>['data']
 type PerformerData = CollectionEntry<'performers'>['data']
 
 export const eventSchema = (
-  event: CollectionEntry<'agenda'>['data'],
+  event: CollectionEntry<'events'>['data'],
   {
     eventPageUrl,
     performers,

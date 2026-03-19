@@ -33,8 +33,8 @@ const performers = defineCollection({
   }),
 })
 
-const agenda = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/agenda' }),
+const events = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/events' }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
@@ -72,4 +72,4 @@ const agenda = defineCollection({
   }),
 })
 
-export const collections = { agenda, places, performers }
+export const collections = { events, places, performers }
