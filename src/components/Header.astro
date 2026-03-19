@@ -1,5 +1,4 @@
 ---
-import HeaderLink from './HeaderLink.astro'
 import { SITE_TITLE } from '../consts'
 ---
 
@@ -11,15 +10,23 @@ import { SITE_TITLE } from '../consts'
     href="/">{SITE_TITLE}</a
   >
   <nav class="hidden min-[500px]:block">
-    <HeaderLink href="/">Inici</HeaderLink>
-    <HeaderLink href="#esdeveniments">Esdeveniments</HeaderLink>
-    <HeaderLink href="/#about">Qui som?</HeaderLink>
-    <HeaderLink
+    <a
+      href="#esdeveniments"
+      class="inline-block px-2 py-4 leading-4 first:pl-4 last:pr-4 focus-visible:underline"
+      >Esdeveniments</a
+    >
+    <a
+      href="/#contacte"
+      class="inline-block px-2 py-4 leading-4 first:pl-4 last:pr-4 focus-visible:underline"
+      >Contacte</a
+    >
+    <a
       href="https://www.instagram.com/barrakudesbegur"
+      class="inline-block px-2 py-4 leading-4 first:pl-4 last:pr-4 focus-visible:underline"
       target="_blank"
       rel="noopener noreferrer"
     >
       Instagram
-    </HeaderLink>
+    </a>
   </nav>
 </header>

@@ -16,9 +16,11 @@
     "@astrojs/sitemap": "^3.7.1",
     "@fontsource/inter": "^5.2.8",
     "@fontsource/londrina-solid": "^5.2.7",
+    "@iconify-json/tabler": "^1.2.31",
     "@tailwindcss/typography": "^0.5.19",
     "@tailwindcss/vite": "^4.2.2",
     "astro": "^6.0.6",
+    "astro-icon": "^1.1.5",
     "astro-seo-schema": "^6.0.0",
     "schema-dts": "^1.1.5",
     "tailwindcss": "^4.2.2"

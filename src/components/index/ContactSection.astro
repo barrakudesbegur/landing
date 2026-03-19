@@ -1,6 +1,10 @@
-<div class="mx-auto max-w-xl scroll-mt-12 px-4 py-12 pt-0" id="about">
+---
+import { Icon } from 'astro-icon/components'
+---
+
+<div class="mx-auto max-w-xl scroll-mt-12 px-4 py-12 pt-0" id="contacte">
   <h2
-    class="mb-6 text-center font-title text-5xl uppercase leading-none tracking-wide text-orange-500"
+    class="font-title mb-6 text-center text-5xl leading-none tracking-wide text-orange-500 uppercase"
   >
     Contacte
   </h2>
@@ -12,54 +16,24 @@
   <div class="mt-8 flex flex-col items-center justify-center space-y-4">
     <a
       href="mailto:hola@barrakudesbegur.org"
-      class="flex items-center gap-2 rounded-full bg-brand px-4 py-2 text-white shadow-md hover:bg-orange-500"
+      class="bg-brand flex items-center gap-2 rounded-full px-4 py-2 text-white shadow-md hover:bg-orange-500"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="icon icon-tabler icon-tabler-mail"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"> </path>
-        <path
-          d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
-        >
-        </path>
-        <path d="M3 7l9 6l9 -6"> </path>
-      </svg>
+      <Icon name="tabler:mail" class="size-6" />
       <span>hola@barrakudesbegur.org</span>
     </a>
     <a
       href="https://www.instagram.com/barrakudesbegur/"
-      class="flex items-center gap-2 rounded-full bg-brand px-4 py-2 text-white shadow-md hover:bg-orange-500"
+      class="bg-brand flex items-center gap-2 rounded-full px-4 py-2 text-white shadow-md hover:bg-orange-500"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="icon icon-tabler icon-tabler-brand-instagram"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"> </path>
-        <path
-          d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z"
-        >
-        </path>
-        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"> </path>
-        <path d="M16.5 7.5l0 .01"> </path>
-      </svg>
+      <Icon name="tabler:brand-instagram" class="size-6" />
       <span>@barrakudesbegur</span>
+    </a>
+    <a
+      href="https://github.com/barrakudesbegur"
+      class="flex items-center gap-2 rounded-full px-4 py-2 text-stone-500 hover:bg-gray-100"
+    >
+      <Icon name="tabler:brand-github" class="size-6" />
+      <span>barrakudesbegur</span>
     </a>
   </div>
 </div>
