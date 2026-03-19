@@ -7,6 +7,10 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   site: 'https://barrakudesbegur.org',
   integrations: [mdx(), sitemap()],
+  redirects: {
+    '/agenda': '/#esdeveniments',
+    '/agenda/[...slug]': '/esdeveniments/[...slug]',
+  },
   vite: {
     plugins: [tailwindcss()],
   },

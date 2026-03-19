@@ -1,127 +1,44 @@
 ---
 import { getCollection } from 'astro:content'
-import EventCard from '../EventCard.astro'
 
-const today = new Date()
-today.setHours(0, 0, 0, 0)
-
-const allEvents = (await getCollection('events'))
+const events = (await getCollection('events'))
   .filter((e) => e.data.image)
   .sort((a, b) => b.data.startDate.valueOf() - a.data.startDate.valueOf())
-
-const hasUpcoming = allEvents.some(
-  (e) => e.data.startDate.valueOf() >= today.valueOf(),
-)
 ---
 
 <div
-  class="group bg-brand scroll-mt-12 px-4 py-12 text-white"
-  id="events"
-  data-empty={hasUpcoming ? undefined : ''}
+  class="bg-brand scroll-mt-12 px-3 py-12 text-white sm:px-6"
+  id="esdeveniments"
 >
   <h2
-    class="font-title mb-6 text-center text-5xl leading-none tracking-wide uppercase"
+    class="font-title mb-10 text-center text-5xl leading-none tracking-wide uppercase"
   >
     Esdeveniments
   </h2>
 
-  <section class="group-data-empty:hidden">
-    <p class="mt-8 mb-6 text-center text-xl leading-none text-white">
-      Pròxims esdeveniments
-    </p>
-    <div class="mx-auto grid max-w-3xl grid-cols-2 gap-3 sm:grid-cols-3">
-      {
-        allEvents.map((event, i) => {
-          const r = ['-2.5', '1.8', '-1.2', '2.8', '-0.5', '1.5', '-3', '0.8'][
-            i % 8
-          ]
-          return (
-            <div
-              data-start-date={event.data.startDate.toISOString()}
-              data-past={event.data.startDate < today ? '' : undefined}
-              class="data-past:hidden"
-            >
-              <EventCard
-                event={event}
-                style={`--r: ${r}deg`}
-                class="rotate-(--r)"
-              />
-            </div>
-          )
-        })
-      }
-    </div>
-    <div class="mt-8 text-center">
-      <a
-        href="/esdeveniments"
-        class="mx-auto inline-block border-b-2 border-orange-300 text-lg leading-none font-semibold text-white"
-      >
-        Veure tots
-      </a>
-    </div>
-  </section>
-
-  <section
-    class="mx-auto hidden max-w-xl pt-16 pb-12 text-center text-base group-data-empty:block"
+  <div
+    class="mx-auto grid max-w-5xl grid-cols-2 items-center gap-3 sm:grid-cols-3 md:grid-cols-4 lg:gap-4"
   >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      class="mx-auto mb-8 w-12"
-      viewBox="0 0 24 24"
-      stroke-width="1"
-      stroke="currentColor"
-      fill="none"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-    >
-      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-      <path
-        d="M9 5h9a2 2 0 0 1 2 2v9m-.184 3.839a2 2 0 0 1 -1.816 1.161h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 1.158 -1.815"
-      ></path>
-      <path d="M16 3v4"></path>
-      <path d="M8 3v1"></path>
-      <path d="M4 11h7m4 0h5"></path>
-      <path d="M3 3l18 18"></path>
-    </svg>
-
-    <p class="text-xl leading-none font-bold text-white">
-      Cap esdeveniment programat
-    </p>
-    <p class="mt-2 text-sm text-orange-100">
-      Estigues atent/a a les nostres xarxes socials!
-    </p>
-
-    <div class="mt-12 text-center">
-      <a
-        href="/esdeveniments"
-        class="mx-auto inline-block border-b-2 border-orange-300 text-lg leading-none font-semibold text-white"
-      >
-        Veure esdeveniments passats
-      </a>
-    </div>
-  </section>
-</div>
-
-<script>
-  const today = new Date()
-  today.setHours(0, 0, 0, 0)
-  const container = document.getElementById('events')
-  if (!container) throw new Error('Events container not found')
-  const items = container.querySelectorAll<HTMLDivElement>(
-    'div[data-start-date]',
-  )
-  let hasUpcoming = false
-
-  items.forEach((div) => {
-    const startDateString = div.dataset.startDate
-    if (!startDateString) throw new Error('Start date not found')
-    const startDate = new Date(startDateString)
-    if (startDate.valueOf() < today.valueOf()) {
-      div.dataset.past = ''
-    } else {
-      hasUpcoming = true
+    {
+      events.map((event, i) => {
+        const r = ['-2.5', '1.8', '-1.2', '2.8', '-0.5', '1.5', '-3', '0.8'][
+          i % 8
+        ]
+        return (
+          <a
+            href={`/esdeveniments/${event.id}/`}
+            style={`--r: ${r}deg`}
+            class="block rotate-(--r) overflow-hidden rounded-xs transition-all duration-300 ease-out hover:z-1 hover:scale-110 hover:rotate-0 hover:shadow-2xl focus-visible:z-1 focus-visible:scale-110 focus-visible:rotate-0 focus-visible:ring-4 focus-visible:ring-white/50 focus-visible:outline-none"
+          >
+            <img
+              src={event.data.image}
+              alt={event.data.title}
+              class="block w-full"
+              loading="lazy"
+            />
+          </a>
+        )
+      })
     }
-  })
-
-  if (!hasUpcoming) container.dataset.empty = ''
-</script>
+  </div>
+</div>
