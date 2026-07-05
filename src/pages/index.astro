@@ -3,6 +3,7 @@ import AboutSection from '../components/index/AboutSection.astro'
 import ContactSection from '../components/index/ContactSection.astro'
 import AgendaSection from '../components/index/AgendaSection.astro'
 import Hero from '../components/index/Hero.astro'
+import SardanesBanner from '../components/index/SardanesBanner.astro'
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
 import BaseLayout from '../layouts/BaseLayout.astro'
 import { organizationSchema } from '../jsonld-schemas/organization'
@@ -14,6 +15,7 @@ import { organizationSchema } from '../jsonld-schemas/organization'
   image="https://barrakudesbegur.github.io/landing/icons/android-chrome-256x256.png"
   schemas={[{ item: organizationSchema }]}
 >
+  <SardanesBanner />
   <Hero />
 
   <main>

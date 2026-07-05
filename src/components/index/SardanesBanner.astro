@@ -1,0 +1,55 @@
+---
+// Dismissable promo banner for the "curs de sardanes" campaign.
+// Links to the campaign site's tracked short link (?q=web).
+// The dismissal is stored in localStorage and read back before paint
+// (inline script + head-bundled style) so returning dismissers never
+// see a flash of the banner.
+const HREF = 'https://sardanes.barrakudesbegur.org/go?q=web'
+---
+
+<script is:inline>
+  // Runs synchronously before the banner below is parsed/painted.
+  if (localStorage.getItem('sardanes-2026-dismissed') === '1') {
+    document.documentElement.classList.add('sardanes-2026-dismissed')
+  }
+</script>
+
+<aside
+  id="sardanes-2026-banner"
+  class="bg-brand border-b border-white/25 text-white"
+>
+  <div class="mx-auto flex max-w-5xl items-center gap-2 px-3 py-2.5 sm:px-6">
+    <a
+      href={HREF}
+      class="font-title group flex-1 text-lg leading-tight tracking-wide uppercase focus-visible:underline sm:text-xl"
+    >
+      💃 Muntem un curs de sardanes?
+      <span
+        class="underline decoration-2 underline-offset-2 group-hover:decoration-4"
+        >Digues-hi la teva →</span
+      >
+    </a>
+    <button
+      type="button"
+      id="sardanes-2026-dismiss"
+      aria-label="Amaga aquest avís"
+      class="-mr-1 shrink-0 rounded-full px-2 py-0.5 text-2xl leading-none transition hover:bg-white/20 focus-visible:bg-white/20 focus-visible:outline-none"
+      >×</button
+    >
+  </div>
+</aside>
+
+<script is:inline>
+  document
+    .getElementById('sardanes-2026-dismiss')
+    ?.addEventListener('click', () => {
+      localStorage.setItem('sardanes-2026-dismissed', '1')
+      document.documentElement.classList.add('sardanes-2026-dismissed')
+    })
+</script>
+
+<style>
+  :global(html.sardanes-2026-dismissed) #sardanes-2026-banner {
+    display: none;
+  }
+</style>
