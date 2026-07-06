@@ -1,4 +1,4 @@
-import { getPublicEvents } from '../lib/events'
+import { formatDateEstimate, getPublicEvents } from '../lib/events'
 
 // The events collection as JSON — consumed by the whatsapp-bot (Kudi's
 // live-agenda knowledge base layer) so event info is never duplicated.
@@ -13,7 +13,11 @@ export async function GET(context) {
       startDate: event.data.startDate.toISOString(),
       endDate: event.data.endDate ? event.data.endDate.toISOString() : null,
       // true = exact date/time not confirmed yet; startDate is an estimate
-      tba: event.data.tba,
+      // and dateLabel says what IS known ("12 o 13 de setembre", "Nadal"…)
+      tba: Boolean(event.data.dateEstimate),
+      dateLabel: event.data.dateEstimate
+        ? formatDateEstimate(event.data)
+        : null,
       url: new URL(`/esdeveniments/${event.id}/`, context.site).href,
     }))
   return new Response(JSON.stringify({ events: items }, null, 2), {

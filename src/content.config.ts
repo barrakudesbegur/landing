@@ -52,9 +52,36 @@ const events = defineCollection({
       .optional()
       .transform((val) => (val ? new Date(val) : undefined)),
     image: z.string().optional(),
-    // Upcoming event whose details (exact date, time, lineup…) are not
-    // confirmed yet. startDate is the best-known estimate, used for ordering.
-    tba: z.boolean().default(false),
+    // Present when the date is not confirmed yet. startDate stays the
+    // best-known estimate (used for ordering); this describes how precisely
+    // the date is known, so the UI can say "12, 13 o 24 de setembre",
+    // "1-8 d'abril", "Nadal", "Setmana Santa", "Data per confirmar"…
+    dateEstimate: z
+      .object({
+        precision: z.enum([
+          'probable', // startDate is the likely exact day
+          'set', // one of `dates`
+          'range', // between `from` and `to`
+          'month', // the month of startDate
+          'period', // a named period (`name`), e.g. "Setmana Santa"
+          'unknown',
+        ]),
+        dates: z
+          .array(z.string().or(z.date()).transform((val) => new Date(val)))
+          .optional(),
+        from: z
+          .string()
+          .or(z.date())
+          .optional()
+          .transform((val) => (val ? new Date(val) : undefined)),
+        to: z
+          .string()
+          .or(z.date())
+          .optional()
+          .transform((val) => (val ? new Date(val) : undefined)),
+        name: z.string().optional(),
+      })
+      .optional(),
     location: reference('places').optional(),
     igPostId: z.string().optional(),
     performers: z.array(reference('performers')).optional(),

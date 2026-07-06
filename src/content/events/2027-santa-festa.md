@@ -3,9 +3,10 @@ title: Santa Festa 2027
 description: Celebra que ja és Setmana Santa 🎉🤩
 startDate: 2027-03-27 23:00
 publicationDate: 2026-07-06 03:00
-tba: true
+dateEstimate:
+  precision: probable
 schedule:
-  note: Dissabte 27 de març, dissabte de Setmana Santa. Detalls per confirmar.
+  note: El dissabte de Setmana Santa. Detalls per confirmar.
 ---
 
 Com cada any, el dissabte de Setmana Santa tornarà la SANTA FESTA! 🎉🤩

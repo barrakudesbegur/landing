@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content'
+import { formatDateEstimate } from '../lib/events'
 
 type Props = {
   event: CollectionEntry<'events'>['data']
@@ -39,12 +40,12 @@ const entryNotes = event.entry?.notes ?? []
 }
 
 {
-  (scheduleDetails.length > 0 || event.schedule?.note || event.tba) && (
+  (scheduleDetails.length > 0 || event.schedule?.note || event.dateEstimate) && (
     <>
       <h2>Horari</h2>
-      {event.tba ? (
+      {event.dateEstimate ? (
         <p>
-          <em>⏳ {event.schedule?.note ?? 'Data i horari per confirmar.'}</em>
+          <em>⏳ {formatDateEstimate(event)} (per confirmar).</em>
         </p>
       ) : (
         <p>{scheduleDateLabel}</p>
@@ -56,7 +57,7 @@ const entryNotes = event.entry?.notes ?? []
           ))}
         </ul>
       )}
-      {!event.tba && event.schedule?.note && (
+      {event.schedule?.note && (
         <p>
           <em>{event.schedule.note}</em>
         </p>
