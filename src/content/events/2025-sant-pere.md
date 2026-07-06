@@ -23,3 +23,7 @@ El 28 de juny t'esperem a la NIT JOVE DE SANT PERE per començar l'estiu com toc
 🎤 Arrencarem la nit amb [La Reina del Pop](https://www.instagram.com/lareinadelpop_tributo), un tribut a La Oreja de Van Gogh per cantar ben fort, seguirem amb els hits d'en [Marc Dunjó](https://www.instagram.com/marcdunjo) 💥, i per acabar-ho de rebentar... [Celtic DJ's](https://www.instagram.com/the_celticdjs) fins que surti el sol! 🌅
 
 💥 Entrada lliure! No facis plans... el pla ja el tens!
+
+## Més informació
+
+- <https://begur.cat/noticies/begur-es-prepara-per-celebrar-la-festa-major-de-sant-pere-2025-del-27-al-29-de-juny/>

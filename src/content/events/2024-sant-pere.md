@@ -22,3 +22,8 @@ I per començar l'estiu com cal farem una bona festaaa i segur que no us ho vole
 El DISSABTE 29 DE JUNY al parc de l'arbreda de Begur a partir de les 21:30h (que farem entrepans per sopar) o més tard… que estarem ben acompanyades de [Orquestra Maribel](https://www.instagram.com/orquestramaribel), [Animal DJs](https://www.instagram.com/animal_djs) i [Ona Giner](https://www.instagram.com/onaginer)!!🤩🎶
 
 No us ho podeu perdree!! Us hi esperem a tots i totes 🫶🏽
+
+## Més informació
+
+- <https://begur.cat/noticies/del-22-al-30-de-juny-torna-la-festa-major-de-sant-pere/>
+- <https://begur.cat/noticies/un-cap-de-setmana-de-gresca-i-xerinola-amb-la-festa-major-de-sant-pere/>

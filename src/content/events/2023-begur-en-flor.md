@@ -21,3 +21,8 @@ Les Barrakudes hem organitzat un vermut musical el diumenge 14, en el que tenim 
 Volem gaudir amb vosaltres d'aquesta festa i d'aquest dia, i per això us esperem a totes i tots a la plaça Esteva i Cruañas de Begur, a partir de les 12:30h del migdia!
 
 🌸🌼🌻🌺🌹
+
+## Més informació
+
+- <https://begur.cat/noticies/begur-en-flor-2023/>
+- <https://begur.cat/noticies/el-begur-en-flor-tanca-la-seva-novena-edicio-amb-un-exit-de-convocatoria/>

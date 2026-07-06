@@ -39,10 +39,16 @@ const entryNotes = event.entry?.notes ?? []
 }
 
 {
-  (scheduleDetails.length > 0 || event.schedule?.note) && (
+  (scheduleDetails.length > 0 || event.schedule?.note || event.tba) && (
     <>
       <h2>Horari</h2>
-      <p>{scheduleDateLabel}</p>
+      {event.tba ? (
+        <p>
+          <em>⏳ {event.schedule?.note ?? 'Data i horari per confirmar.'}</em>
+        </p>
+      ) : (
+        <p>{scheduleDateLabel}</p>
+      )}
       {scheduleDetails.length > 0 && (
         <ul>
           {scheduleDetails.map((detail) => (
@@ -50,7 +56,7 @@ const entryNotes = event.entry?.notes ?? []
           ))}
         </ul>
       )}
-      {event.schedule?.note && (
+      {!event.tba && event.schedule?.note && (
         <p>
           <em>{event.schedule.note}</em>
         </p>

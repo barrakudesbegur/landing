@@ -28,3 +28,5 @@ Que en siguin moltes més 🧡🏃🏽‍♀️
 
 - <http://www.perdutsbegur.cat/2026/04/15-marxa-popular-puja-i-baixa-begur.html>
 - <http://www.perdutsbegur.cat/2026/06/15-marxa-popular-puja-i-baixa-begur-2026_0162826912.html>
+- <https://begur.cat/noticies/la-marxa-popular-puja-i-baixa-tornara-a-recorrer-begur-el-21-de-juny/>
+- <https://begur.cat/noticies/begur-vibra-amb-la-15a-puja-i-baixa-i-una-nova-edicio-de-la-mini-puja-i-baixa-i-la-tarda-daventures/>

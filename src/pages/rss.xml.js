@@ -1,9 +1,9 @@
 import rss from '@astrojs/rss'
-import { getCollection } from 'astro:content'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
+import { getPublicEvents } from '../lib/events'
 
 export async function GET(context) {
-  const events = await getCollection('events')
+  const events = await getPublicEvents()
   return rss({
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,

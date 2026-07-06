@@ -48,3 +48,7 @@ L'aplicació que hem creat per a la quinemusical està disponible a GitHub i és
 Codi font: <https://github.com/barrakudesbegur/quina-musical>
 
 Aplicació: <https://quina.barrakudesbegur.org>
+
+## Més informació
+
+- <https://begur.cat/noticies/els-barrakudes-begur-celebren-nadal-amb-la-quina-musical/>

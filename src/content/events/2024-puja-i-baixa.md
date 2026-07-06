@@ -23,3 +23,7 @@ Que en siguin moltes més 🧡🏃🏽‍♀️
 - <http://www.perdutsbegur.cat/2024/06/ha-estat-un-plaer-nosaltres-som-gent-de.html>
 - <https://www.instagram.com/p/C8msGTSNfb5/>
 - <https://www.instagram.com/p/C8j3DJLNb8j/>
+
+## Més informació
+
+- <https://begur.cat/noticies/la-13a-edicio-de-la-marxa-puja-i-baixa-reuneix-mes-de-1-500-participants/>

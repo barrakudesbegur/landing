@@ -27,3 +27,8 @@ Prepara't per una nit de música, festa i molt de bon rotllo! 🎉
 🎶 Actuacions en directe amb [Les Que Faltaband](https://www.instagram.com/lesquefaltaband), [Marc Dunjó](https://www.instagram.com/marcdunjo) i [DJ Kzu](https://www.instagram.com/kzu_music).
 
 No pots faltar!!! T'esperem amb moltes ganes!!! 🔥🔥🔥
+
+## Més informació
+
+- <https://begur.cat/noticies/la-festa-major-de-santa-reparada-2025-arriba-a-begur-amb-cinema-musica-cercavila-i-un-dinar-popular/>
+- <https://begur.cat/noticies/la-festa-major-de-santa-reparada-posa-punt-i-final-a-lestiu-a-begur/>

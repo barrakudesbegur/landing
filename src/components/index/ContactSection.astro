@@ -1,5 +1,6 @@
 ---
 import { Icon } from 'astro-icon/components'
+import { FEATURE_SARDANES } from '../../consts'
 ---
 
 <div class="mx-auto max-w-xl scroll-mt-12 px-4 py-12 pt-0" id="contacte">
@@ -28,6 +29,17 @@ import { Icon } from 'astro-icon/components'
       <Icon name="tabler:brand-instagram" class="size-6" />
       <span>@barrakudesbegur</span>
     </a>
+    {
+      FEATURE_SARDANES && (
+        <a
+          href="https://wa.barrakudesbegur.org"
+          class="bg-brand flex items-center gap-2 rounded-full px-4 py-2 text-white shadow-md hover:bg-orange-500"
+        >
+          <Icon name="tabler:brand-whatsapp" class="size-6" />
+          <span>WhatsApp</span>
+        </a>
+      )
+    }
     <a
       href="https://github.com/barrakudesbegur"
       class="flex items-center gap-2 rounded-full px-4 py-2 text-stone-500 hover:bg-gray-100"

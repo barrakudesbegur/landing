@@ -23,3 +23,7 @@ Ja ho estem preparant tot de nou, tenim el doble de ganes i esperem que vosaltre
 Us esperem aquest dissabte a les 12h a la plaça Esteva i Cruañas de Begur! A qui no li ve de gust un vermutet o una cerveseta i musiqueta, sempre ben acompanyats i acompanyades?
 
 Ens veiem aviat 🫰🏽🫰🏽✨✨
+
+## Més informació
+
+- <https://begur.cat/noticies/rues-animacio-i-festa-per-carnaval/>

@@ -18,3 +18,8 @@ Aquest any tindrem una paradeta a la Plaça de l’Església, a partir de les 14
 Passeu a veure’ns i a gaudir del dia més bonic de l’any amb nosaltres 💛
 
 Us hi esperem amb molta il·lusió! ❤️
+
+## Més informació
+
+- <https://begur.cat/noticies/per-sant-jordi-a-begur-es-respira-cultura-per-tots-els-racons/>
+- <https://begur.cat/noticies/begur-tanca-un-sant-jordi-molt-viu-participatiu-i-estes-a-tots-els-racons-del-municipi/>

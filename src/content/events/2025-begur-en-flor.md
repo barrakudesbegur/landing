@@ -21,3 +21,8 @@ Aquest cap de setmana celebrem Begur en Flor, i no se'ns acut millor manera de g
 Diumenge 25 a les 12:00h us esperem a la plaça Esteva i Cruañas amb [Dcalle Oficial](https://www.instagram.com/dcalle_oficial), que vindran a posar ritme i alegria amb unes rumbetes! 💃🏽🕺🏽
 
 Us hi esperem a tots i totes amb moltes ganes de fer uns bons bailoteos! 🍻🎉🫶🏼
+
+## Més informació
+
+- <https://begur.cat/noticies/lassociacio-de-comerc-i-turisme-de-begur-presenta-l11a-edicio-de-begur-en-flor-del-23-al-25-de-maig/>
+- <https://begur.cat/noticies/begur-tanca-amb-exit-l11a-edicio-de-begur-en-flor/>

@@ -52,6 +52,9 @@ const events = defineCollection({
       .optional()
       .transform((val) => (val ? new Date(val) : undefined)),
     image: z.string().optional(),
+    // Upcoming event whose details (exact date, time, lineup…) are not
+    // confirmed yet. startDate is the best-known estimate, used for ordering.
+    tba: z.boolean().default(false),
     location: reference('places').optional(),
     igPostId: z.string().optional(),
     performers: z.array(reference('performers')).optional(),

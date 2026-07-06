@@ -1,18 +1,18 @@
 ---
 import {
   type CollectionEntry,
-  getCollection,
   getEntry,
   getEntries,
   render,
 } from 'astro:content'
+import { getPublicEvents } from '../../lib/events'
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import { SITE_TITLE } from '../../consts'
 import { eventSchema } from '../../jsonld-schemas/event'
 import EventDetailsSections from '../../components/EventDetailsSections.astro'
 
 export async function getStaticPaths() {
-  const events = await getCollection('events')
+  const events = await getPublicEvents()
   return events.map((event) => ({
     params: { slug: event.id },
     props: { event },

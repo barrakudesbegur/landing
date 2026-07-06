@@ -26,3 +26,8 @@ Aquesta vegada ens acompanyaran [La Masovera Barbuda](https://www.instagram.com/
 No cal que us diem que no us la podeu perdre… no? Serà una festassa, com les de sempre 😉🤪🧡
 
 Ens veiem molt i moooolt aviat!
+
+## Més informació
+
+- <https://begur.cat/noticies/gresca-i-xerinola-a-la-festa-major-de-santa-reparada-2/>
+- <https://begur.cat/noticies/begur-acomiada-lestiu-amb-la-festa-major-de-santa-reparada/>

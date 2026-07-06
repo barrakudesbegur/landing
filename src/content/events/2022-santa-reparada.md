@@ -22,3 +22,7 @@ Després de l'èxit de la festa jove de la Festa Major, tornem amb una nit de DJ
 I ni més ni menys, que amb [Kharloss Selektah](https://www.instagram.com/kharloss_selektah) i [IvanOte](https://www.instagram.com/ivanote) ‼️
 
 No us la perdeu!!! 🤩 Que de l'última festa encara se'n parla!!! 🤟🏼
+
+## Més informació
+
+- <https://begur.cat/noticies/del-16-al-19-de-setembre-viu-la-festa-major-de-santa-reparada/>
