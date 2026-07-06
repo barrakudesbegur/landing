@@ -3,7 +3,7 @@ title: Vermut musical de Carnaval 2024
 description: Vine a passar una bona estona amb nosaltres!
 startDate: 2024-02-24 12:00
 endDate: 2024-02-24 14:00
-publicationDate: 2024-02-19 16:47
+publicationDate: 2024-02-19 17:47
 image: /events/2024-vermut-carnaval.jpg
 igPostId: 'C3iUwp8t39d'
 location: esteva-i-cruanas
