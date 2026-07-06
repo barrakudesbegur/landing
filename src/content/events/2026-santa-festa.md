@@ -23,3 +23,7 @@ Aquesta vegada tenim la sort de comptar amb [DJ Calvins](https://www.instagram.c
 
 Us esperem a totes i tots amb moltes ganes!
 No us ho perdeu!!!
+
+## Més informació
+
+- <https://visitbegur.cat/evento/la-santa-festa/>

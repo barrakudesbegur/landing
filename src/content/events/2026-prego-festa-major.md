@@ -34,3 +34,4 @@ També podeu veure el [vídeo del pregó que va publicar l’Ajuntament](https:/
 
 - <https://begur.cat/noticies/begur-celebrara-la-festa-major-de-sant-pere-2026-amb-quatre-dies-plens-dactivitats-per-a-tots-els-publics/>
 - <https://begur.cat/noticies/begur-viu-la-festa-major-de-sant-pere-amb-intensitat-i-molta-diversio/>
+- <https://visitbegur.cat/evento/festa-major-de-sant-pere-28-06-2026/>
