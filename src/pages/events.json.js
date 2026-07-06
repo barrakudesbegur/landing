@@ -19,6 +19,12 @@ export async function GET(context) {
         ? formatDateEstimate(event.data)
         : null,
       url: new URL(`/esdeveniments/${event.id}/`, context.site).href,
+      image: event.data.image
+        ? new URL(event.data.image, context.site).href
+        : null,
+      instagram: event.data.igPostId
+        ? `https://www.instagram.com/p/${event.data.igPostId}/`
+        : null,
     }))
   return new Response(JSON.stringify({ events: items }, null, 2), {
     headers: { 'Content-Type': 'application/json; charset=utf-8' },
