@@ -3,7 +3,7 @@ title: Un curs de sardanes?
 description: 'Una idea que ens ronda pel cap: i si aprenguéssim a ballar sardanes? 💃'
 startDate: 2026-10-04 11:00
 publicationDate: 2026-07-05 12:00
-image: /events/2026-curs-sardanes.png
+image: /events/2026-curs-sardanes.jpg
 entry:
   details: []
 ---
