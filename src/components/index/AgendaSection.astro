@@ -1,8 +1,20 @@
 ---
 import { getPublicEvents } from '../../lib/events'
+import EventTile from './EventTile.astro'
 
-const events = (await getPublicEvents())
-  .filter((e) => e.data.image)
+const events = await getPublicEvents()
+
+// Build-time split: an event is upcoming until it has finished.
+const now = new Date()
+const isUpcoming = (event: (typeof events)[number]) =>
+  (event.data.endDate ?? event.data.startDate).valueOf() >= now.valueOf()
+
+// Upcoming: soonest first. Past: most recent first.
+const upcoming = events
+  .filter(isUpcoming)
+  .sort((a, b) => a.data.startDate.valueOf() - b.data.startDate.valueOf())
+const past = events
+  .filter((event) => !isUpcoming(event))
   .sort((a, b) => b.data.startDate.valueOf() - a.data.startDate.valueOf())
 ---
 
@@ -16,29 +28,33 @@ const events = (await getPublicEvents())
     Esdeveniments
   </h2>
 
-  <div
-    class="mx-auto grid max-w-5xl grid-cols-2 items-center gap-3 sm:grid-cols-3 md:grid-cols-4 lg:gap-4"
-  >
+  {
+    upcoming.length > 0 && (
+      <div class="mx-auto mb-12 max-w-5xl">
+        <h3 class="font-title mb-4 text-2xl leading-none tracking-wide text-white/90 uppercase">
+          Properament
+        </h3>
+        <div class="grid grid-cols-2 items-center gap-3 sm:grid-cols-3 md:grid-cols-4 lg:gap-4">
+          {upcoming.map((event, i) => (
+            <EventTile event={event} index={i} />
+          ))}
+        </div>
+      </div>
+    )
+  }
+
+  <div class="mx-auto max-w-5xl">
     {
-      events.map((event, i) => {
-        const r = ['-2.5', '1.8', '-1.2', '2.8', '-0.5', '1.5', '-3', '0.8'][
-          i % 8
-        ]
-        return (
-          <a
-            href={`/esdeveniments/${event.id}/`}
-            style={`--r: ${r}deg`}
-            class="block rotate-(--r) overflow-hidden rounded-xs transition-all duration-300 ease-out hover:z-1 hover:scale-110 hover:rotate-0 hover:shadow-2xl focus-visible:z-1 focus-visible:scale-110 focus-visible:rotate-0 focus-visible:ring-4 focus-visible:ring-white/50 focus-visible:outline-none"
-          >
-            <img
-              src={event.data.image}
-              alt={event.data.title}
-              class="block w-full"
-              loading="lazy"
-            />
-          </a>
-        )
-      })
+      upcoming.length > 0 && (
+        <h3 class="font-title mb-4 text-2xl leading-none tracking-wide text-white/90 uppercase">
+          Esdeveniments passats
+        </h3>
+      )
     }
+    <div
+      class="grid grid-cols-2 items-center gap-3 sm:grid-cols-3 md:grid-cols-4 lg:gap-4"
+    >
+      {past.map((event, i) => <EventTile event={event} index={i} />)}
+    </div>
   </div>
 </div>

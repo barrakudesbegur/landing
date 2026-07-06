@@ -1,0 +1,61 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+type Props = { event: CollectionEntry<'events'>; index: number }
+
+const { event, index } = Astro.props
+
+const rotation = ['-2.5', '1.8', '-1.2', '2.8', '-0.5', '1.5', '-3', '0.8'][
+  index % 8
+]
+
+// For events that don't have a poster yet (e.g. upcoming ones)
+const monthYearLabel = (date: Date) => {
+  const label = new Intl.DateTimeFormat('ca-ES', {
+    month: 'long',
+    year: 'numeric',
+  }).format(date)
+  return label.charAt(0).toUpperCase() + label.slice(1)
+}
+---
+
+<a
+  href={`/esdeveniments/${event.id}/`}
+  style={`--r: ${rotation}deg`}
+  class="block rotate-(--r) overflow-hidden rounded-xs transition-all duration-300 ease-out hover:z-1 hover:scale-110 hover:rotate-0 hover:shadow-2xl focus-visible:z-1 focus-visible:scale-110 focus-visible:rotate-0 focus-visible:ring-4 focus-visible:ring-white/50 focus-visible:outline-none"
+>
+  {
+    event.data.image ? (
+      <img
+        src={event.data.image}
+        alt={event.data.title}
+        class="block w-full"
+        loading="lazy"
+      />
+    ) : (
+      <div class="relative flex aspect-4/5 w-full flex-col items-center justify-center bg-white p-6 text-center">
+        <div
+          class="pointer-events-none absolute inset-2 rounded-sm border-2 border-dashed border-orange-300"
+          aria-hidden="true"
+        />
+        <img
+          src="/logo-cercle-taronja.svg"
+          alt=""
+          class="mb-3 size-9"
+          loading="lazy"
+        />
+        <span class="font-title text-2xl leading-none tracking-wide text-orange-600 uppercase">
+          {event.data.title}
+        </span>
+        <span class="mt-1.5 text-sm text-stone-500">
+          {monthYearLabel(event.data.startDate)}
+        </span>
+        {event.data.tba && (
+          <span class="font-title mt-3 rounded-full bg-orange-100 px-3 py-1 text-sm leading-none tracking-wide text-orange-700 uppercase">
+            Per confirmar
+          </span>
+        )}
+      </div>
+    )
+  }
+</a>
