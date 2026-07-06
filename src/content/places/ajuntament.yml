@@ -1,0 +1,11 @@
+name: Balcó de l'Ajuntament, Begur
+address:
+  streetAddress: Plaça de l'Església, 8
+  addressLocality: Begur
+  addressRegion: Girona
+  postalCode: "17255"
+  addressCountry: ES
+geo:
+  latitude: 41.95436
+  longitude: 3.2069
+sameAs: https://www.google.com/maps/search/?api=1&query=Ajuntament%20de%20Begur%2C%20Pla%C3%A7a%20de%20l%27Esgl%C3%A9sia%208%2C%2017255%20Begur

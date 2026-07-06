@@ -1,0 +1,11 @@
+name: Plaça de l'Església, Begur
+address:
+  streetAddress: Plaça de l'Església, s/n
+  addressLocality: Begur
+  addressRegion: Girona
+  postalCode: "17255"
+  addressCountry: ES
+geo:
+  latitude: 41.954323
+  longitude: 3.207131
+sameAs: https://www.google.com/maps/search/?api=1&query=Pla%C3%A7a%20de%20l%27Esgl%C3%A9sia%2C%20Begur
