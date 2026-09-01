@@ -1,0 +1,11 @@
+name: Casal de la Gent Gran
+address:
+  streetAddress: Av. de l'Onze de Setembre, 3
+  addressLocality: Begur
+  addressRegion: Girona
+  postalCode: '17255'
+  addressCountry: ES
+geo:
+  latitude: 41.9536491
+  longitude: 3.2071178
+sameAs: https://maps.app.goo.gl/GVnFZNncMnCfcNmM8

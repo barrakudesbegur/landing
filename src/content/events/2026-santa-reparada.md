@@ -3,6 +3,7 @@ title: Festa de Santa Reparada 2026
 description: Torna la festa de Santa Reparada, i els Barrakudes hi serem! 🎉
 startDate: 2026-09-19 23:00
 publicationDate: 2026-07-06 03:00
+location: arbreda
 dateEstimate:
   precision: probable
 schedule:

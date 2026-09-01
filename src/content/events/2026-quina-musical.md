@@ -3,6 +3,7 @@ title: Quina musical 2026
 description: Per Nadal, torna la quina musical dels Barrakudes! 🎄🎶
 startDate: 2026-12-27 18:00
 publicationDate: 2026-07-06 03:00
+location: esteva-i-cruanas
 dateEstimate:
   precision: period
   name: Nadal
