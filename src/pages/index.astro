@@ -12,7 +12,7 @@ import { organizationSchema } from '../jsonld-schemas/organization'
 <BaseLayout
   title={`${SITE_TITLE} | Associació Juvenil de Begur | Qui sóm?`}
   description={SITE_DESCRIPTION}
-  image="https://barrakudesbegur.github.io/landing/icons/android-chrome-256x256.png"
+  image={new URL('ogimage.png', Astro.site).toString()}
   schemas={[{ item: organizationSchema }]}
 >
   {FEATURE_SARDANES && <SardanesBanner />}
