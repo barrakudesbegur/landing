@@ -8,7 +8,8 @@ dateEstimate:
   precision: probable
 schedule:
   note: Cada dissabte
-  details: Cada dissabte
+  details: 
+    - Cada dissabte
 ---
 
 - 📍 Casal de la Gent gran, Begur
