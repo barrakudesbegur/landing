@@ -1,24 +1,33 @@
 ---
 title: Curs de Sardanes 2026-2027
-description: Torna la festa de Santa Reparada, i els Barrakudes hi serem! 🎉
+description: Vols aprendre a ballar sardanes? 💃🏽🕺🏽
 startDate: 2026-10-10 17:00
-publicationDate: 2026-09-04 03:00
+endDate: 2026-10-10 19:00
+publicationDate: 2026-09-22 21:22
 location: casal-gent-gran
-dateEstimate:
-  precision: probable
+image: /events/2026-sardanes.jpg
+igPostId: 'Ddmef4kRkxs'
 schedule:
-  note: Cada dissabte
-  details: 
-    - Cada dissabte
+  details:
+    - Dissabtes de 17:00 a 19:00.
+    - Comencem el 10 d'octubre.
+entry:
+  details:
+    - Activitat gratuïta.
 ---
 
-- 📍 Casal de la Gent gran, Begur
-- 📆 Dissabtes de 5pm a 7pm
-- ⌛ Del 10 d'Octubre al 23 d'Abril de 2027
-- 👤 De 10 a 99 anys
-- 🎁 Gratuït
-- 🎊 Classes obertes (No cal apuntar-se ni continuitat)
+💃🏽 VOLS APRENDRE A BALLAR SARDANES? 🕺🏽
 
-Canal difusió WhatsApp: <!-- <https://whatsapp.com/channel/0029Vb8YLIG59PwWhcOehT45> --> _Próximament_
+Aquest octubre Barrakudes posem en marxa una nova iniciativa: un espai per aprendre a ballar sardanes, descobrir una part de la nostra cultura i compartir-la amb tothom qui s'hi vulgui sumar 🫶🏽
 
-Organitzat per Barrakudes Begur
+I el millor? No cal venir cada setmana! 🙌🏽 Pots venir a les classes que et vagi bé, quan vulguis i tantes vegades com vulguis. No hi ha cap compromís d'assistència: tu tries quan t'hi vols sumar!
+
+- 📍 Casal de la Gent Gran, Begur
+- 📆 Dissabtes de 17:00 a 19:00
+- ⌛ Del 10 d'octubre al 23 d'abril de 2027
+- 👤 A partir de 10 anys
+- 🎁 Activitat gratuïta
+
+📲 Vols rebre tota la informació? Escaneja el QR del cartell i entra al nostre grup de difusió de WhatsApp!
+
+Vine a fer pinya amb nosaltres! ❤️

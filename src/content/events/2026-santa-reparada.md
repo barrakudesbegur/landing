@@ -1,15 +1,30 @@
 ---
-title: Festa de Santa Reparada 2026
-description: Torna la festa de Santa Reparada, i els Barrakudes hi serem! 🎉
+title: Nit Jove de Santa Reparada 2026
+description: Ja sabeu què toca quan arriba Santa Reparada... FESTA GROSSA 💃🏼🕺🏽
 startDate: 2026-09-19 23:00
-publicationDate: 2026-07-06 03:00
+publicationDate: 2026-09-07 20:42
 location: arbreda
-dateEstimate:
-  precision: probable
+image: /events/2026-santa-reparada.jpg
+igPostId: 'Dc_yBGERon9'
+performers:
+  - dj-trapella
+  - dj-adria-giner
+  - dj-arzonists
 schedule:
-  note: Horari per confirmar.
+  details:
+    - A partir de les 23:00.
 ---
 
-Del 18 al 20 de setembre Begur celebra la [Festa Major de Santa Reparada](https://visitbegur.cat/evento/festa-major-de-santa-reparada-20-09-2026/), i com cada any, els Barrakudes hi posarem el nostre granet de sorra el dissabte a la nit. 🧡
+Ja sabeu què toca quan arriba Santa Reparada... FESTA GROSSA 💃🏼🕺🏽
 
-Encara estem preparant tots els detalls: molt aviat us explicarem què tenim entre mans! Estigueu atents a l'[Instagram](https://www.instagram.com/barrakudesbegur/) 👀
+Aquest dissabte 19 de setembre ens trobem al Parc de l'Arbreda per tancar l'estiu com cal 🔥
+
+Us esperem a partir de les 23:00 amb:
+
+- 🎧 DJ Trapella
+- 🤘🏽 DJ Adrià Giner
+- 🎸 DJ Arzonists
+
+Tres DJ's, música, festa i tota la nit per davant 🤩🍻
+
+Millor que no hi falteuuuu 🤜🏽🤛🏽 ens veiem allà 🧡
