@@ -2,7 +2,7 @@
 title: Santa Festa 2026
 description: Celebra que ja és Setmana Santa 🎉🤩
 startDate: 2026-04-04 23:00
-endDate: 2026-04-04 2:30
+endDate: 2026-04-05 2:30
 publicationDate: 2026-03-12 18:24
 location: esteva-i-cruanas
 image: /events/2026-santa-festa.jpg

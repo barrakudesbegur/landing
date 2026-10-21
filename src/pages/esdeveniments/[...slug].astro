@@ -10,6 +10,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro'
 import { SITE_TITLE } from '../../consts'
 import { eventSchema } from '../../jsonld-schemas/event'
 import EventDetailsSections from '../../components/EventDetailsSections.astro'
+import AddToCalendar from '../../components/AddToCalendar.astro'
 
 export async function getStaticPaths() {
   const events = await getPublicEvents()
@@ -54,6 +55,8 @@ const resolvedPerformers = performers.map((p) => p.data)
       <h1 class="mb-2 uppercase sm:text-6xl">{event.title}</h1>
 
       <hr class="my-2 border-gray-300" />
+
+      <AddToCalendar event={eventEntry} />
 
       <Content />
       <EventDetailsSections

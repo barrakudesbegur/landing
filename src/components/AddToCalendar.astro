@@ -1,0 +1,36 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import { Icon } from 'astro-icon/components'
+import { eventEnd, googleCalendarUrl, isCalendarReady } from '../lib/ical'
+
+type Props = { event: CollectionEntry<'events'> }
+
+const { event } = Astro.props
+
+// Only worth offering for confirmed events that haven't finished yet.
+const show = isCalendarReady(event) && eventEnd(event) >= new Date()
+const googleUrl = show ? await googleCalendarUrl(event, Astro.site!) : ''
+---
+
+{
+  show && (
+    <div class="not-prose my-4 flex flex-wrap gap-2">
+      <a
+        href={`/esdeveniments/${event.id}.ics`}
+        class="bg-brand flex items-center gap-2 rounded-full px-4 py-2 text-sm text-white shadow-md hover:bg-orange-500"
+      >
+        <Icon name="tabler:calendar-plus" class="size-5" />
+        <span>Afegeix al calendari</span>
+      </a>
+      <a
+        href={googleUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex items-center gap-2 rounded-full px-4 py-2 text-sm text-stone-600 ring-1 ring-stone-300 hover:bg-gray-100"
+      >
+        <Icon name="tabler:brand-google" class="size-5" />
+        <span>Google Calendar</span>
+      </a>
+    </div>
+  )
+}

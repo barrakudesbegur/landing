@@ -1,0 +1,39 @@
+---
+import { Icon } from 'astro-icon/components'
+
+const feedUrl = new URL('/calendari.ics', Astro.site)
+// webcal:// makes iOS/macOS (and most Android calendar apps) offer to
+// subscribe instead of importing a one-off copy.
+const webcalUrl = feedUrl.href.replace(/^https?:/, 'webcal:')
+const googleUrl = `https://calendar.google.com/calendar/r?cid=${encodeURIComponent(webcalUrl)}`
+---
+
+<div
+  class="flex flex-col items-center gap-3 rounded-sm bg-orange-700 p-6 text-center"
+>
+  <p class="font-title text-2xl leading-none tracking-wide uppercase">
+    No et perdis cap festa
+  </p>
+  <p class="max-w-md text-sm leading-snug text-white/90">
+    Subscriu-te al nostre calendari i els esdeveniments apareixeran sols al
+    calendari del teu mòbil.
+  </p>
+  <div class="mt-1 flex flex-wrap justify-center gap-2">
+    <a
+      href={webcalUrl}
+      class="flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-orange-700 shadow-md hover:bg-orange-50"
+    >
+      <Icon name="tabler:calendar-plus" class="size-5" />
+      <span>Subscriu-te</span>
+    </a>
+    <a
+      href={googleUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="flex items-center gap-2 rounded-full px-4 py-2 text-sm font-medium text-white ring-1 ring-white/60 hover:bg-white/10"
+    >
+      <Icon name="tabler:brand-google" class="size-5" />
+      <span>Google Calendar</span>
+    </a>
+  </div>
+</div>

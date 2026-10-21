@@ -1,6 +1,7 @@
 ---
 import { getPublicEvents } from '../../lib/events'
 import EventTile from './EventTile.astro'
+import SubscribeCalendar from './SubscribeCalendar.astro'
 
 const events = await getPublicEvents()
 
@@ -64,6 +65,10 @@ const past = events
       </div>
     )
   }
+
+  <div class="mx-auto mb-12 max-w-5xl">
+    <SubscribeCalendar />
+  </div>
 
   <div class="mx-auto max-w-5xl">
     {
