@@ -132,6 +132,10 @@ export async function buildCalendar(events: Event[], site: URL) {
     `X-WR-CALNAME:${escapeText(SITE_TITLE)}`,
     `X-WR-CALDESC:${escapeText(SITE_DESCRIPTION)}`,
     `X-WR-TIMEZONE:${TZID}`,
+    // Brand orange. Apple Calendar reads the X- one; RFC 7986 COLOR only
+    // takes CSS color names. Google Calendar ignores both.
+    'X-APPLE-CALENDAR-COLOR:#FF8201',
+    'COLOR:darkorange',
     // Hint for subscribed calendars to check for new events twice a day
     'REFRESH-INTERVAL;VALUE=DURATION:PT12H',
     'X-PUBLISHED-TTL:PT12H',
