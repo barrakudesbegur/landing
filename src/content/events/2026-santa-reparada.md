@@ -21,10 +21,14 @@ Aquest dissabte 19 de setembre ens trobem al Parc de l'Arbreda per tancar l'esti
 
 Us esperem a partir de les 23:00 amb:
 
-- 🎧 DJ Trapella
-- 🤘🏽 DJ Adrià Giner
-- 🎸 DJ Arzonists
+- 🎧 [DJ Trapella](https://www.instagram.com/djtrapella)
+- 🤘🏽 [DJ Adrià Giner](https://www.instagram.com/adriaginer)
+- 🎸 [DJ Arzonists](https://www.instagram.com/arzonists)
 
 Tres DJ's, música, festa i tota la nit per davant 🤩🍻
 
 Millor que no hi falteuuuu 🤜🏽🤛🏽 ens veiem allà 🧡
+
+## Més informació
+
+- <https://begur.cat/noticies/santa-reparada-tornara-a-omplir-begur-de-musica-cultura-popular-i-activitats-per-a-tots-els-publics/>
