@@ -31,3 +31,9 @@ I el millor? No cal venir cada setmana! 🙌🏽 Pots venir a les classes que et
 📲 Vols rebre tota la informació? Escaneja el QR del cartell i entra al nostre grup de difusió de WhatsApp!
 
 Vine a fer pinya amb nosaltres! ❤️
+
+## Primera classe
+
+Mira com va anar la primera classe, el 10 d'octubre:
+
+- <https://www.instagram.com/p/DeXTdvFke10/>
